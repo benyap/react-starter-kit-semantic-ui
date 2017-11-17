@@ -10,12 +10,14 @@
     "build:semantic": "./node_modules/.bin/gulp --gulpfile semantic/gulpfile.js --cwd semantic/ build-assets && ./node_modules/.bin/gulp --gulpfile semantic/gulpfile.js --cwd semantic/ build-css",
     "build:package": "./node_modules/.bin/env-cmd config/prod.config ./node_modules/.bin/webpack -p --progress",
     "watch:semantic": "./node_modules/.bin/gulp --gulpfile semantic/gulpfile.js --cwd semantic/ watch",
-    "watch:local": "./node_modules/.bin/env-cmd config/dev.config ./node_modules/.bin/webpack-dev-server",
+    "watch:local": "./node_modules/.bin/env-cmd config/dev.config ./node_modules/.bin/webpack-dev-server --history-api-fallback",
     "build": "npm run build:semantic && npm run build:package",
     "local": "./node_modules/.bin/concurrently -k \"npm run watch:semantic\" \"npm run watch:local\"",
     "stat": "./node_modules/.bin/env-cmd config/prod.config ./node_modules/.bin/webpack -p --json --progress > stats.json"
   },
   "dependencies": {
+    "core-decorators": "^0.20.0",
+    "prop-types": "^15.6.0",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
     "react-router-dom": "^4.2.2",

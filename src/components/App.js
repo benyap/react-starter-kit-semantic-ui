@@ -1,21 +1,18 @@
 import React from 'react';
-import { Header, Button, Icon } from 'semantic-ui-react'
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
+import Home from './pages/Home';
+import NotFound from './pages/NotFound';
 
 
-class App extends React.Component {
-	render() {
-		return (
-			<div>
-				<Header as='h1'>Hello World!</Header>
-				<Button animated>
-					<Button.Content visible>Button</Button.Content>
-					<Button.Content hidden>
-						<Icon name='right arrow' />
-					</Button.Content>
-				</Button>
-			</div>
-		);
-	}
+const App = () => {
+	return (
+		<BrowserRouter>
+			<Switch>
+				<Route exact path='/' component={Home}/>
+				<Route component={NotFound}/>
+			</Switch>
+		</BrowserRouter>
+	);
 }
 
 
