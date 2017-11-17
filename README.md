@@ -35,14 +35,14 @@ The files inside `src` can be customised in any way to build your application. T
     .
     ├── config/                      # Environemnt variables for the dev and prod build
     │
-    ├── semantic/	                 # Semantic UI assets
+    ├── semantic/                    # Semantic UI assets
     │   ├── dist/                    # Compiled and minified css (do not commit)
     │   ├── src/
-    │   │   ├── site/...	         # Site theme customisation files (modify these)
-    │   │   ├── themes/...	         # Default Semantic UI themes (try not to modify)
+    │   │   ├── site/...             # Site theme customisation files (modify these)
+    │   │   ├── themes/...           # Default Semantic UI themes (try not to modify)
     │   │   └── ...
-    │   ├── tasks/...	             # Gulp tasks for building assets (do not modify)
-    │   └── gulpfile.js	             # Gulp tasks for building assets (do not modify)
+    │   ├── tasks/...                # Gulp tasks for building assets (do not modify)
+    │   └── gulpfile.js              # Gulp tasks for building assets (do not modify)
     │
     ├── src/                         # Application source
     │   ├── assets/                  # Static assets
@@ -60,7 +60,6 @@ The files inside `src` can be customised in any way to build your application. T
     ├── package.json
     ├── webpack.config.js
     └── ...
-
 ```
 
 ## How to use this project
