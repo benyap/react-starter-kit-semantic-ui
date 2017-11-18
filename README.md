@@ -45,11 +45,12 @@ The files inside `src` can be customised in any way to build your application. T
     │   └── gulpfile.js              # Gulp tasks for building assets (do not modify)
     │
     ├── src/                         # Application source
+    │   ├── app/                     # Static assets
+    │   │   ├── components/...       # Custom components
+    │   │   ├── pages/...            # Custom component pages
+    │   │   └── App.js               # Root application component (contains routing logic)
     │   ├── assets/                  # Static assets
     │   │   ├── index.html           # Index page template
-    │   │   └── ...
-    │   ├── components/              # Custom components
-    │   │   ├── App.js               # Root application component
     │   │   └── ...
     │   ├── styles/                  # Custom component stylesheets
     │   │   ├── semantic.scss        # Imports styling for React Semantic UI components
