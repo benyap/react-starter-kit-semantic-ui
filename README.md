@@ -70,7 +70,8 @@ The files inside `src` can be customised in any way to build your application. T
 1. Clone the repository onto your local machine.
 2. Ensure you have `npm` installed. 
 3. In the root directory of the project, run `npm install` to install all required dependencies. 
-   *NOTE: As of November 2017, you cannot use `yarn` to install the packages as the Semantic UI React install script does not seem to work properly with `yarn`.*
+
+*NOTE: As of November 2017, you cannot use `yarn` to install the packages as the Semantic UI React install script does not seem to work properly with `yarn`.*
 
 ### Running the project locally
 
