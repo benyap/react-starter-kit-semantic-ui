@@ -47,7 +47,7 @@ The files inside `src` can be customised in any way to build your application. T
     ├── src/                         # Application source
     │   ├── app/                     # Static assets
     │   │   ├── components/...       # Custom components
-    │   │   ├── pages/...            # Custom component pages
+    │   │   ├── views/...            # Custom 'views' built from components
     │   │   └── App.js               # Root application component (contains routing logic)
     │   ├── assets/                  # Static assets
     │   │   ├── index.html           # Index page template

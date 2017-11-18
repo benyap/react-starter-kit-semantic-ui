@@ -3,8 +3,8 @@ import autobind from 'core-decorators/es/autobind';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { Transition, Button } from 'semantic-ui-react';
 import SidebarMenu from './components/SidebarMenu';
-import Home from './pages/Home';
-import NotFound from './pages/NotFound';
+import Home from './views/Home';
+import NotFound from './views/NotFound';
 
 
 @autobind
