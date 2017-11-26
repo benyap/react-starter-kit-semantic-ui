@@ -34,30 +34,26 @@ The files inside `src` can be customised in any way to build your application. T
 ```
     .
     ├── config/                      # Environemnt variables for the dev and prod build
-    │
-    ├── semantic/                    # Semantic UI assets
-    │   ├── dist/                    # Compiled and minified css (do not commit)
-    │   ├── src/
-    │   │   ├── site/...             # Site theme customisation files (modify these)
-    │   │   ├── themes/...           # Default Semantic UI themes (try not to modify)
-    │   │   └── ...
-    │   ├── tasks/...                # Gulp tasks for building assets (do not modify)
-    │   └── gulpfile.js              # Gulp tasks for building assets (do not modify)
-    │
     ├── src/                         # Application source
     │   ├── app/                     # Static assets
     │   │   ├── components/...       # Custom components
+    │   │   ├── containers/...       # Custom component containers
+    │   │   ├── styles/...           # Styles used by components
     │   │   ├── views/...            # Custom 'views' built from components
     │   │   └── App.js               # Root application component (contains routing logic)
     │   ├── assets/                  # Static assets
     │   │   ├── index.html           # Index page template
     │   │   └── ...
-    │   ├── styles/                  # Custom component stylesheets
-    │   │   ├── semantic.scss        # Imports styling for React Semantic UI components
-    │   │   └── ...
+    │   ├── semantic-ui/             # Semantic UI assets
+    │   │   ├── dist/                # Compiled and minified css (do not commit)
+    │   │   ├── src/
+    │   │   │   ├── site/...         # Site theme customisation files (modify these)
+    │   │   │   ├── themes/...       # Default Semantic UI themes (try not to modify)
+    │   │   │   └── ...
+    │   │   ├── tasks/...            # Gulp tasks for building assets (do not modify)
+    │   │   └── gulpfile.js          # Gulp tasks for building assets (do not modify)
     │   ├── index.js
     │   └── ...
-    │
     ├── package.json
     ├── webpack.config.js
     └── ...
