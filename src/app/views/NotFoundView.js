@@ -5,7 +5,7 @@ import TitleWithIcon from '../components/TitleWithIcon';
 import '../styles/view-notFound.scss';
 
 
-class NotFound extends React.Component {
+class NotFoundView extends React.Component {
 	render() {
 		const { location, history } = this.props;
 		
@@ -28,4 +28,4 @@ class NotFound extends React.Component {
 }
 
 
-export default NotFound;
+export default NotFoundView;

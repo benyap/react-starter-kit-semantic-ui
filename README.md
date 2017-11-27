@@ -16,20 +16,25 @@ React Semantic UI is a port of the [Semanic UI](https://semantic-ui.com/) librar
 
 React Router is a vital part of the React ecosystem that provides routing for Singe Page Applications. It enables you to build a full blown application with static and dynamic routes right within React, which allows the whole site to be served as a statically. Find out more at the [official website](https://reacttraining.com/react-router/). 
 
+### SCSS Breakpoints
+
+Some useful breakpoint mixins are provided in the `src/app/styles/_bp.scss` file. They are provided for convenience and use a mobile-first approach. View the `README.md` file in the `src/app/styles` folder for more details on how to use the mixins. 
+
 ## What's provided
 
 When you run this project for the first time, you are presented with a basic Single Page Application built with React. It contains:
 
 * A landing page showing a kitchen sink containing commonly used Semantic UI components
 * A few links to other basic pages to show the React Router functionality
+* Some basic styling boilerplate SCSS files
 
 That's it! The rest is up to you to implement. 
 
 ### Source structure
 
-The Semantic UI styling assets are kept in the `semantic` folder. The built and minified assets are output to the `semantic/dist` folder, where they can be imported to the application using the `src/styles/semantic.scss` file. The files inside `semantic/src/site` can be used to customise the look and feel of the site. The other files in the `semantic` directory should not need to be modified.
+The Semantic UI styling assets are kept in the `src/semantic-ui` folder. The built and minified assets are output to the `src/semantic/dist` folder, where they can be imported to the application using the `src/app/styles/_semantic.scss` file. The files inside `src/semantic-ui/src/site` can be used to customise the look and feel of the site. The other files in the `semantic-ui` directory should not need to be modified.
 
-The files inside `src` can be customised in any way to build your application. The files `webpack.config.js` and `package.json` contain the scripts that build the project. 
+The files inside `src/app` can be customised in any way to build your application. The files `webpack.config.js` and `package.json` contain the scripts that build the project. 
 
 ```
     .
@@ -71,7 +76,7 @@ The files inside `src` can be customised in any way to build your application. T
 
 ### Running the project locally
 
-1. If you have never built the project before, run the command `npm run build:semantic` to build the Semantic UI assets for the first time. 
+1. If you have never built the project before, run the command `npm run build:semantic` to build the Semantic UI assets for the first time (this will output the files into the `src/semantic-ui/dist` directory, where they are imported into other files). 
 2. Run `npm run local` to build and serve the project on `http://localhost:8080`. 
 
 This will use `webpack-dev-server` to serve the assets, and watch source files for any changes. Note that you do not need to run `npm run build:semantic` again once you've built the Semantic UI assets once as `npm run local` will watch the source for any changes and rebuild the assets. 
@@ -82,6 +87,18 @@ This will use `webpack-dev-server` to serve the assets, and watch source files f
 
 1. Run the command `npm run build`.
 2. This should output the build files into the folder `dist`. You may upload these files to a server for static web hosting. 
+
+## Notes on conventions used
+
+### Components, containers and views
+
+Components, containers and views are all React components, but each one serves a specific purpose and are separated into different folders. A **component** is a sometimes also known as a 'dumb component', as its only job is to render information to the user - they are only concerned with how things look, and will rarely contain state. A **container**, sometimes also known as a 'smart component', often serve as data sources. They are not concerned with how things look, so they should not need any styles. Their main purpose is to retrieve data from a source and pass the data to components to display that data. This [article](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0) contains a more in depth summary of the differences.
+
+A **view** is a top-level component that is used at the top level of the React router switch (found in `src/app/App.js`). It is a stand-alone 'page' that should be displayed at a route, and can contain components and containers. A view should not be nested inside another container, component or view. 
+
+### BEM style class names
+
+Class names used for styling components follow the BEM style guide, outlined [here](http://http://getbem.com/). Block names are prefixed with one of `component` or `view` (containers do need any styling). Each component or view is considered one block. Each block has their own SCSS file, located in `src/app/styles` with the file name being the same as the block name. 
 
 ## License
 

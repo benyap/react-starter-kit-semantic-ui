@@ -3,8 +3,8 @@ import autobind from 'core-decorators/es/autobind';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { Transition, Button } from 'semantic-ui-react';
 import SidebarMenu from './components/SidebarMenu';
-import Home from './views/Home';
-import NotFound from './views/NotFound';
+import HomeView from './views/HomeView';
+import NotFoundView from './views/NotFoundView';
 
 
 @autobind
@@ -29,8 +29,8 @@ class App extends React.Component {
 					
 					{/* Routes */}
 					<Switch>
-						<Route exact path='/' component={Home}/>
-						<Route component={NotFound}/>
+						<Route exact path='/' component={HomeView}/>
+						<Route component={NotFoundView}/>
 					</Switch>
 
 				</SidebarMenu>
