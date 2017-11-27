@@ -39,17 +39,17 @@ The files inside `src/app` can be customised in any way to build your applicatio
 ```
     .
     ├── config/                      # Environemnt variables for the dev and prod build
-    ├── src/                         # Application source
-    │   ├── app/                     # Static assets
+    ├── src/
+    │   ├── app/
     │   │   ├── components/...       # Custom components
     │   │   ├── containers/...       # Custom component containers
     │   │   ├── styles/...           # Styles used by components
     │   │   ├── views/...            # Custom 'views' built from components
     │   │   └── App.js               # Root application component (contains routing logic)
-    │   ├── assets/                  # Static assets
+    │   ├── assets/
     │   │   ├── index.html           # Index page template
-    │   │   └── ...
-    │   ├── semantic-ui/             # Semantic UI assets
+    │   │   └── ...                  # Static assets go in here
+    │   ├── semantic-ui/
     │   │   ├── dist/                # Compiled and minified css (do not commit)
     │   │   ├── src/
     │   │   │   ├── site/...         # Site theme customisation files (modify these)
