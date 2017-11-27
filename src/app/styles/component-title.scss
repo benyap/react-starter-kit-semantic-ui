@@ -1,10 +1,12 @@
+@import 'bp';
+
 $block: component-title;
 
 .#{$block} {
 	background-color: #365475;
 	min-height: 60vh;
 
-	@media (min-width: 480px) {
+	@media (min-width: $bp-xs) {
 		min-height: 55vh;
 	}
 
@@ -14,7 +16,7 @@ $block: component-title;
 		font-size: 1.8rem;
 		padding-top: 20vh;
 
-		@media (min-width: 480px) {
+		@media (min-width: $bp-xs) {
 			font-size: 2rem;
 			padding-top: 30vh;
 		}
