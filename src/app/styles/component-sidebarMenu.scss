@@ -1,0 +1,9 @@
+$block: component-sidebarMenu;
+
+.#{$block} {
+	height: inherit;
+
+	.pusher {
+		height: 100vh;
+	}
+}

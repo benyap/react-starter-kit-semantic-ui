@@ -2,13 +2,15 @@ import React from 'react';
 import { Button, Container } from 'semantic-ui-react';
 import Title from '../components/Title';
 
+import '../styles/view-home.scss';
+
 
 class Home extends React.Component {
 	render() {
 		return (
-			<div>
+			<div className='view-home'>
 				<Title text='Welcome to the React Semantic UI starter kit'>
-					<div style={{padding:'3rem 0 3rem 0',textAlign:'center'}} >
+					<div className='view-home__button-container'>
 						<Button as='a' 
 							icon='github'
 							content='View on GitHub'

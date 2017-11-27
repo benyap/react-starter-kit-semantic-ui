@@ -1,0 +1,15 @@
+@import 'component-title';
+
+$block: component-title;
+
+.#{$block}--icon {
+	@extend .#{$block};
+
+	h1.ui.header {
+		padding-top: 15vh;
+
+		@media (min-width: 480px) {
+			padding-top: 20vh;
+		}
+	}
+}

@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { Sidebar, Menu, Icon } from 'semantic-ui-react';
 
+import '../styles/component-sidebarMenu.scss';
+
 
 class SidebarMenu extends React.Component {
 	static propTypes = {
@@ -12,7 +14,7 @@ class SidebarMenu extends React.Component {
 
 	render() {
 		return (
-			<Sidebar.Pushable style={{height:'inherit'}}>
+			<Sidebar.Pushable className='component-sidebarMenu'>
 				<Sidebar as={Menu} animation='overlay' width='thin' visible={this.props.visible} icon='labeled' vertical inverted>
 					<Menu.Item onClick={this.props.toggleSidebar}>
 						<Icon name='remove'/>
@@ -26,7 +28,7 @@ class SidebarMenu extends React.Component {
 						Not Found
 					</Menu.Item>
 				</Sidebar>
-				<Sidebar.Pusher style={{height:'100vh'}}>
+				<Sidebar.Pusher>
 					{this.props.children}
 				</Sidebar.Pusher>
 			</Sidebar.Pushable>
