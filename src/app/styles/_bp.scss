@@ -8,7 +8,7 @@ $bp-xl:   1244px;
 $bp-xxl:  1410px;
 
 
-// Mobile first approach: media query applies to all breakpoints ABOVE specified breakpoint
+// Mobile first breakpoint mixin: applies to all breakpoints larger than the specified breakpoint
 @mixin bp-above($bp) {
 	@if $bp == xxs {
 		@media only screen and (min-width: $bp-xxs + 1) {
@@ -48,7 +48,7 @@ $bp-xxl:  1410px;
 }
 
 
-// Breakpoint specific: only applies styles from previous breakpoint up until specified breakpoint
+// Breakpoint specific mixin: only applies styles from the previous breakpoint up until the specified breakpoint
 @mixin bp-only($bp) {
 	@if $bp == xxs {
 		@media only screen and (max-width: $bp-xxs) {
