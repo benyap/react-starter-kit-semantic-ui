@@ -50,7 +50,7 @@ The files inside `src/app` can be customised in any way to build your applicatio
     │   │   ├── index.html           # Index page template
     │   │   └── ...                  # Static assets go in here
     │   ├── semantic-ui/
-    │   │   ├── dist/                # Compiled and minified css (do not commit)
+    │   │   ├── dist/...             # Compiled and minified css (do not commit)
     │   │   ├── src/
     │   │   │   ├── site/...         # Site theme customisation files (modify these)
     │   │   │   ├── themes/...       # Default Semantic UI themes (try not to modify)
