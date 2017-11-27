@@ -98,7 +98,7 @@ A **view** is a top-level component that is used at the top level of the React r
 
 ### BEM style class names
 
-Class names used for styling components follow the BEM style guide, outlined [here](http://http://getbem.com/). Block names are prefixed with one of `component` or `view` (containers do need any styling). Each component or view is considered one block. Each block has their own SCSS file, located in `src/app/styles` with the file name being the same as the block name. 
+Class names used for styling components follow the BEM style guide, outlined [here](http://getbem.com). Block names are prefixed with one of `component` or `view` (containers do need any styling). Each component or view is considered one block. Each block has their own SCSS file, located in `src/app/styles` with the file name being the same as the block name. 
 
 ## License
 
