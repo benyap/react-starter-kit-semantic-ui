@@ -5,8 +5,10 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
 	entry: {
-		main: './src/index.js',
-		vendor_ui: [
+		main: [
+			'./src/index.js'
+		],
+		'vendor-ui': [
 			'react',
 			'react-dom',
 			'semantic-ui-react'
@@ -57,11 +59,11 @@ module.exports = {
 	},
 	output: {
 		path: __dirname + '/dist',
-		filename: 'js/[name]-[chunkhash].min.js',
+		filename: 'js/[name].min.js',
 		publicPath: '/'
 	},
 	plugins: [
-		new CleanWebpackPlugin(['dist']),
+		new CleanWebpackPlugin(['dist/*']),
 
 		new webpack.DefinePlugin({
 			'process.env':{
@@ -70,15 +72,15 @@ module.exports = {
 		}),
 		
 		new webpack.optimize.CommonsChunkPlugin({
-			name: ['vendor', 'vendor_ui'],
+			name: ['vendor', 'vendor-ui'],
 			minChunks: Infinity
 		}),
 
-		new ExtractTextPlugin('css/[name]-[chunkhash].css'),
+		new ExtractTextPlugin('css/[name].css'),
 		
 		new HTMLWebpackPlugin({
 			filename: 'index.html',
-			chunks: ['vendor', 'vendor_ui', 'main'],
+			chunks: ['vendor', 'vendor-ui', 'main'],
 			template: 'src/assets/index.html'
 		})
 	],
