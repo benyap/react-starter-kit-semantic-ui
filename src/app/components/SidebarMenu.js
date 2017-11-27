@@ -13,23 +13,25 @@ class SidebarMenu extends React.Component {
 	}
 
 	render() {
+		const { visible, toggleSidebar, children } = this.props;
+
 		return (
 			<Sidebar.Pushable className='component-sidebarMenu'>
-				<Sidebar as={Menu} animation='overlay' width='thin' visible={this.props.visible} icon='labeled' vertical inverted>
-					<Menu.Item onClick={this.props.toggleSidebar}>
+				<Sidebar as={Menu} animation='overlay' width='thin' visible={visible} icon='labeled' vertical inverted>
+					<Menu.Item onClick={toggleSidebar}>
 						<Icon name='remove'/>
 					</Menu.Item>
-					<Menu.Item as={Link} to='/' onClick={this.props.toggleSidebar}>
+					<Menu.Item as={Link} to='/' onClick={toggleSidebar}>
 						<Icon name='home'/>
 						Home
 					</Menu.Item>
-					<Menu.Item as={Link} to='/404' onClick={this.props.toggleSidebar}>
+					<Menu.Item as={Link} to='/404' onClick={toggleSidebar}>
 						<Icon name='warning circle'/>
 						Not Found
 					</Menu.Item>
 				</Sidebar>
 				<Sidebar.Pusher>
-					{this.props.children}
+					{children}
 				</Sidebar.Pusher>
 			</Sidebar.Pushable>
 		);
