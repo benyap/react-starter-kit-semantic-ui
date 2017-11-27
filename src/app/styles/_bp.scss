@@ -6,3 +6,83 @@ $bp-md:   768px;
 $bp-lg:   1024px;
 $bp-xl:   1244px;
 $bp-xxl:  1410px;
+
+
+// Mobile first approach: media query applies to all breakpoints ABOVE specified breakpoint
+@mixin bp-above($bp) {
+	@if $bp == xxs {
+		@media only screen and (min-width: $bp-xxs + 1) {
+			@content;
+		}
+	}
+	@else if $bp == xs {
+		@media only screen and (min-width: $bp-xs + 1) {
+			@content;
+		}
+	}
+	@else if $bp == sm {
+		@media only screen and (min-width: $bp-sm + 1) {
+			@content;
+		}
+	}
+	@else if $bp == md {
+		@media only screen and (min-width: $bp-md + 1) {
+			@content;
+		}
+	}
+	@else if $bp == lg {
+		@media only screen and (min-width: $bp-lg + 1) {
+			@content;
+		}
+	}
+	@else if $bp == xl {
+		@media only screen and (min-width: $bp-xl + 1) {
+			@content;
+		}
+	}
+	@else if $bp == xxl {
+		@media only screen and (min-width: $bp-xxl + 1) {
+			@content;
+		}
+	}
+}
+
+
+// Breakpoint specific: only applies styles from previous breakpoint up until specified breakpoint
+@mixin bp-only($bp) {
+	@if $bp == xxs {
+		@media only screen and (max-width: $bp-xxs) {
+			@content;
+		}
+	}
+	@else if $bp == xs {
+		@media only screen and (min-width: $bp-xxs) and (max-width: $bp-xs - 1) {
+			@content;
+		}
+	}
+	@else if $bp == sm {
+		@media only screen and (min-width: $bp-xs) and (max-width: $bp-sm - 1) {
+			@content;
+		}
+	}
+	@else if $bp == md {
+		@media only screen and (min-width: $bp-sm) and (max-width: $bp-md - 1) {
+			@content;
+		}
+	}
+	@else if $bp == lg {
+		@media only screen and (min-width: $bp-md) and (max-width: $bp-lg - 1) {
+			@content;
+		}
+	}
+	@else if $bp == xl {
+		@media only screen and (min-width: $bp-xl) and (max-width: $bp-xxl - 1) {
+			@content;
+		}
+	}
+	@else if $bp == xxl {
+		@media only screen and (min-width: $bp-xxl) {
+			@content;
+		}
+	}
+}

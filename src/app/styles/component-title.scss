@@ -6,7 +6,7 @@ $block: component-title;
 	background-color: #365475;
 	min-height: 60vh;
 
-	@media (min-width: $bp-xs) {
+	@include bp-above(xs) {
 		min-height: 55vh;
 	}
 
@@ -16,7 +16,7 @@ $block: component-title;
 		font-size: 1.8rem;
 		padding-top: 20vh;
 
-		@media (min-width: $bp-xs) {
+		@include bp-above(xs) {
 			font-size: 2rem;
 			padding-top: 30vh;
 		}
