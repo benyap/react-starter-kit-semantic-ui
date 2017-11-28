@@ -100,6 +100,22 @@ A **view** is a top-level component that is used at the top level of the React r
 
 Class names used for styling components follow the BEM style guide, outlined [here](http://getbem.com). Block names are prefixed with one of `component` or `view` (containers do need any styling). Each component or view is considered one block. Each block has their own SCSS file, located in `src/app/styles` with the file name being the same as the block name. 
 
+
+### The Trailing Comma
+
+You may notice that there are a bunch of trailing commas in the source code. For example, see the comma following `publicPath`, even though it's the last key in the object: 
+
+```json
+output: {
+    path: __dirname + '/dist',
+    filename: 'js/[name].min.js',
+    publicPath: '/',
+}
+```
+
+This is a newer convention - it allows you to add a new key to the object or a new item to an array without needing to modify the previous line. This is helpful as it allows a more accurate reporting of lines changed when you make commits. 
+
+
 ## License
 
 This project is licensed under the MIT License.
