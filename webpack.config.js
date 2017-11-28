@@ -9,6 +9,12 @@ module.exports = {
 			'babel-polyfill',
 			'./src/index.jsx',
 		],
+		vendor: [
+			'react',
+			'react-dom',
+			'react-router-dom',
+			'semantic-ui-react',
+		]
 	},
 	module: {
 		rules: [
@@ -60,12 +66,18 @@ module.exports = {
 				'NODE_ENV': JSON.stringify(process.env.NODE_ENV),
 			}
 		}),
+
+		new webpack.HashedModuleIdsPlugin(),
 		
 		new webpack.optimize.CommonsChunkPlugin({
-			name: 'common'
+			name: 'vendor'
 		}),
 
-		new ExtractTextPlugin('css/[name].css'),
+		new webpack.optimize.CommonsChunkPlugin({
+			name: 'commons'
+		}),
+
+		new ExtractTextPlugin('css/[name].[chunkhash].css'),
 		
 		new HTMLWebpackPlugin({
 			filename: 'index.html',
@@ -74,8 +86,8 @@ module.exports = {
 	],
 	output: {
 		path: __dirname + '/dist',
-		filename: 'js/[name].min.js',
-		chunkFilename: 'js/[name].min.js',
+		filename: 'js/[name].[chunkhash].js',
+		chunkFilename: 'js/[name].[chunkhash].js',
 		publicPath: '/',
 	},
 	devtool: 'source-map',
