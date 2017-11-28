@@ -2,9 +2,10 @@ import React from 'react';
 import autobind from 'core-decorators/es/autobind';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { Transition, Button } from 'semantic-ui-react';
-import SidebarMenu from './components/SidebarMenu';
-import HomeView from './views/HomeView';
-import NotFoundView from './views/NotFoundView';
+import { SidebarMenu } from './components/SidebarMenu';
+import { HomeView } from './views/HomeView';
+import { LazyLoadView } from './views/LazyLoadView';
+import { NotFoundView } from './views/NotFoundView';
 
 
 @autobind

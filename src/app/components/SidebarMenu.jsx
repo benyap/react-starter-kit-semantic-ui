@@ -6,7 +6,7 @@ import { Sidebar, Menu, Icon } from 'semantic-ui-react';
 import '../styles/component-sidebarMenu.scss';
 
 
-class SidebarMenu extends React.Component {
+export class SidebarMenu extends React.Component {
 	static propTypes = {
 		visible: PropTypes.bool.isRequired,
 		toggleSidebar: PropTypes.func.isRequired,
@@ -37,6 +37,3 @@ class SidebarMenu extends React.Component {
 		);
 	}
 }
-
-
-export default SidebarMenu;

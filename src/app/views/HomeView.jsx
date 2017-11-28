@@ -1,11 +1,11 @@
 import React from 'react';
 import { Button, Container } from 'semantic-ui-react';
-import Title from '../components/Title';
+import { Title } from '../components/Title';
 
 import '../styles/view-home.scss';
 
 
-class HomeView extends React.Component {
+export class HomeView extends React.Component {
 	render() {
 		return (
 			<div className='view-home'>
@@ -26,6 +26,3 @@ class HomeView extends React.Component {
 		);
 	}
 }
-
-
-export default HomeView;

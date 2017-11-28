@@ -5,7 +5,7 @@ import { Header } from 'semantic-ui-react'
 import '../styles/component-title.scss';
 
 
-class Title extends React.Component {
+export class Title extends React.Component {
 	static propTypes = {
 		text: PropTypes.string,
 		subtext: PropTypes.any,
@@ -27,6 +27,3 @@ class Title extends React.Component {
 		);
 	}
 }
-
-
-export default Title;

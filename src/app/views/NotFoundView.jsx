@@ -1,11 +1,11 @@
 import React from 'react';
 import { Button, Icon } from 'semantic-ui-react'
-import TitleWithIcon from '../components/TitleWithIcon';
+import { TitleWithIcon } from '../components/TitleWithIcon';
 
 import '../styles/view-notFound.scss';
 
 
-class NotFoundView extends React.Component {
+export class NotFoundView extends React.Component {
 	render() {
 		const { location, history } = this.props;
 		
@@ -26,6 +26,3 @@ class NotFoundView extends React.Component {
 		);
 	}
 }
-
-
-export default NotFoundView;

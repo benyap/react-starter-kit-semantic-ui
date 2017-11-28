@@ -5,7 +5,7 @@ import { Header, Icon } from 'semantic-ui-react'
 import '../styles/component-title--icon.scss';
 
 
-class TitleWithIcon extends React.Component {
+export class TitleWithIcon extends React.Component {
 	static propTypes = {
 		text: PropTypes.string,
 		subtext: PropTypes.any,
@@ -29,6 +29,3 @@ class TitleWithIcon extends React.Component {
 		);
 	}
 }
-
-
-export default TitleWithIcon;
