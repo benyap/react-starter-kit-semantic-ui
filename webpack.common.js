@@ -1,7 +1,6 @@
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
 	entry: {
@@ -64,8 +63,6 @@ module.exports = {
 		extensions: ['*', '.js', '.jsx'],
 	},
 	plugins: [
-		new CleanWebpackPlugin(['dist/*']),
-
 		new webpack.HashedModuleIdsPlugin(),
 		
 		new webpack.optimize.CommonsChunkPlugin({
