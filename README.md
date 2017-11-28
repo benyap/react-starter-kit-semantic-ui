@@ -105,7 +105,7 @@ Class names used for styling components follow the BEM style guide, outlined [he
 
 You may notice that there are a bunch of trailing commas in the source code. For example, see the comma following `publicPath`, even though it's the last key in the object: 
 
-```json
+```javascript
 output: {
     path: __dirname + '/dist',
     filename: 'js/[name].min.js',
@@ -114,7 +114,6 @@ output: {
 ```
 
 This is a newer convention - it allows you to add a new key to the object or a new item to an array without needing to modify the previous line. This is helpful as it allows a more accurate reporting of lines changed when you make commits. 
-
 
 ## License
 
