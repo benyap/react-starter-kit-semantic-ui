@@ -6,17 +6,17 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 module.exports = {
 	entry: {
 		main: [
-			'./src/index.jsx'
+			'./src/index.jsx',
 		],
 		'vendor-ui': [
 			'react',
 			'react-dom',
-			'semantic-ui-react'
+			'semantic-ui-react',
 		],
 		vendor: [
 			'babel-polyfill',
-			'react-router-dom'
-		]
+			'react-router-dom',
+		],
 	},
 	module: {
 		rules: [
@@ -28,10 +28,10 @@ module.exports = {
 						loader: 'babel-loader',
 						options: {
 							presets: ['react', 'env'],
-							plugins: ['transform-class-properties', 'transform-decorators-legacy']
+							plugins: ['transform-class-properties', 'transform-decorators-legacy'],
 						}
-					}
-				]
+					},
+				],
 			},
 			{
 				test: /\.scss$/,
@@ -39,21 +39,21 @@ module.exports = {
 					fallback: 'style-loader',
 					use: [
 						{ loader: 'css-loader', options: { minimize: true, sourceMap: true } },
-						{ loader: 'sass-loader', options: { sourceMap: true } }
+						{ loader: 'sass-loader', options: { sourceMap: true } },
 					]
-				})
+				}),
 			},
 			{
 				test: /\.(ico)(\?v=[0-9]\.[0-9]\.[0-9])?$/, 
-				loader: 'file-loader', options: {name: '[name].[ext]'}
+				loader: 'file-loader', options: {name: '[name].[ext]'},
 			},
 			{
 				test: /\.(woff|woff2|eot|ttf|otf)(\?v=[0-9]\.[0-9]\.[0-9])?$/, 
-				loader: 'file-loader', options: {name: 'fonts/[name].[ext]'}
+				loader: 'file-loader', options: {name: 'fonts/[name].[ext]'},
 			},
 			{
 				test: /\.(jpg|gif|png|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, 
-				loader: 'file-loader', options: {name: 'images/[name].[ext]'}
+				loader: 'file-loader', options: {name: 'images/[name].[ext]'},
 			}
 		]
 	},
@@ -63,20 +63,20 @@ module.exports = {
 	output: {
 		path: __dirname + '/dist',
 		filename: 'js/[name].min.js',
-		publicPath: '/'
+		publicPath: '/',
 	},
 	plugins: [
 		new CleanWebpackPlugin(['dist/*']),
 
 		new webpack.DefinePlugin({
 			'process.env':{
-				'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+				'NODE_ENV': JSON.stringify(process.env.NODE_ENV),
 			}
 		}),
 		
 		new webpack.optimize.CommonsChunkPlugin({
 			name: ['vendor', 'vendor-ui'],
-			minChunks: Infinity
+			minChunks: Infinity,
 		}),
 
 		new ExtractTextPlugin('css/[name].css'),
@@ -84,8 +84,8 @@ module.exports = {
 		new HTMLWebpackPlugin({
 			filename: 'index.html',
 			chunks: ['vendor', 'vendor-ui', 'main'],
-			template: 'src/assets/index.html'
-		})
+			template: 'src/assets/index.html',
+		}),
 	],
-	devtool: 'source-map'
+	devtool: 'source-map',
 };

@@ -9,7 +9,7 @@ import '../styles/component-sidebarMenu.scss';
 class SidebarMenu extends React.Component {
 	static propTypes = {
 		visible: PropTypes.bool.isRequired,
-		toggleSidebar: PropTypes.func.isRequired
+		toggleSidebar: PropTypes.func.isRequired,
 	}
 
 	render() {

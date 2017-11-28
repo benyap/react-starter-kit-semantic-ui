@@ -8,7 +8,7 @@ import '../styles/component-title.scss';
 class Title extends React.Component {
 	static propTypes = {
 		text: PropTypes.string,
-		subtext: PropTypes.any
+		subtext: PropTypes.any,
 	}
 
 	render() {

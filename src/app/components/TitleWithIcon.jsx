@@ -9,7 +9,7 @@ class TitleWithIcon extends React.Component {
 	static propTypes = {
 		text: PropTypes.string,
 		subtext: PropTypes.any,
-		icon: PropTypes.string
+		icon: PropTypes.string,
 	}
 
 	render() {
