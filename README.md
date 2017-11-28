@@ -34,11 +34,10 @@ That's it! The rest is up to you to implement.
 
 The Semantic UI styling assets are kept in the `src/semantic-ui` folder. The built and minified assets are output to the `src/semantic/dist` folder, where they can be imported to the application using the `src/app/styles/_semantic.scss` file. The files inside `src/semantic-ui/src/site` can be used to customise the look and feel of the site. The other files in the `semantic-ui` directory should not need to be modified.
 
-The files inside `src/app` can be customised in any way to build your application. The files `webpack.config.js` and `package.json` contain the scripts that build the project. 
+The files inside `src/app` can be customised in any way to build your application. The files `webpack.*.js` and `package.json` contain the scripts that build the project. 
 
 ```
     .
-    ├── config/                      # Environemnt variables for the dev and prod build
     ├── src/
     │   ├── app/
     │   │   ├── components/...       # Custom components
@@ -60,7 +59,7 @@ The files inside `src/app` can be customised in any way to build your applicatio
     │   ├── index.js
     │   └── ...
     ├── package.json
-    ├── webpack.config.js
+    ├── webpack.common.js
     └── ...
 ```
 
