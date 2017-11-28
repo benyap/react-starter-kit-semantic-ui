@@ -6,16 +6,8 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 module.exports = {
 	entry: {
 		main: [
-			'./src/index.jsx',
-		],
-		'vendor-ui': [
-			'react',
-			'react-dom',
-			'semantic-ui-react',
-		],
-		vendor: [
 			'babel-polyfill',
-			'react-router-dom',
+			'./src/index.jsx',
 		],
 	},
 	module: {
@@ -28,7 +20,7 @@ module.exports = {
 						loader: 'babel-loader',
 						options: {
 							presets: ['react', 'env'],
-							plugins: ['transform-class-properties', 'transform-decorators-legacy'],
+							plugins: ['transform-class-properties', 'transform-decorators-legacy', 'syntax-dynamic-import'],
 						}
 					},
 				],
@@ -60,11 +52,6 @@ module.exports = {
 	resolve: {
 		extensions: ['*', '.js', '.jsx'],
 	},
-	output: {
-		path: __dirname + '/dist',
-		filename: 'js/[name].min.js',
-		publicPath: '/',
-	},
 	plugins: [
 		new CleanWebpackPlugin(['dist/*']),
 
@@ -75,17 +62,21 @@ module.exports = {
 		}),
 		
 		new webpack.optimize.CommonsChunkPlugin({
-			name: ['vendor', 'vendor-ui'],
-			minChunks: Infinity,
+			name: 'common'
 		}),
 
 		new ExtractTextPlugin('css/[name].css'),
 		
 		new HTMLWebpackPlugin({
 			filename: 'index.html',
-			chunks: ['vendor', 'vendor-ui', 'main'],
 			template: 'src/assets/index.html',
 		}),
 	],
+	output: {
+		path: __dirname + '/dist',
+		filename: 'js/[name].min.js',
+		chunkFilename: 'js/[name].min.js',
+		publicPath: '/',
+	},
 	devtool: 'source-map',
 };

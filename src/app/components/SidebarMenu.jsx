@@ -25,6 +25,10 @@ export class SidebarMenu extends React.Component {
 						<Icon name='home'/>
 						Home
 					</Menu.Item>
+					<Menu.Item as={Link} to='/lazy' onClick={toggleSidebar}>
+						<Icon name='home'/>
+						Lazy Load
+					</Menu.Item>
 					<Menu.Item as={Link} to='/404' onClick={toggleSidebar}>
 						<Icon name='warning circle'/>
 						Not Found
