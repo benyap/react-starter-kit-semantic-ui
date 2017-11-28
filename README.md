@@ -80,7 +80,7 @@ The files inside `src/app` can be customised in any way to build your applicatio
 
 This will use `webpack-dev-server` to serve the assets, and watch source files for any changes. Note that you do not need to run `npm run build:semantic` again once you've built the Semantic UI assets once as `npm run local` will watch the source for any changes and rebuild the assets. 
 
-##### Running the project locally (app only)
+#### Running the project locally (app only)
 
 Use this method if you do not intend to modify any Semantic UI components. Changes to the source inside `src/semantic-ui` will not be compiled in this mode. 
 
@@ -95,7 +95,7 @@ Use this method if you do not intend to modify any Semantic UI components. Chang
 1. Run the command `npm run build`.
 2. This should output the build files into the folder `dist`. You may upload these files to a server for static web hosting. 
 
-##### Building for production (app only)
+#### Building for production (app only)
 
 Use this method if the Semantic UI components have not been modified since the last build. This command will execute the build quicker as it will not recompile the Semantic UI assets. 
 
