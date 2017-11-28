@@ -1,19 +1,22 @@
 {
   "name": "react-semantic-ui-start-kit",
-  "description": "A starter kit for spinning up a React and Semantic-UI frontend project",
+  "description": "A starter kit for spinning up a React frontend project with Semantic UI",
   "version": "1.0.0",
   "main": "src/index.jsx",
   "author": "bwyap",
   "license": "MIT",
   "private": true,
   "scripts": {
-    "build:semantic": "./node_modules/.bin/gulp --gulpfile src/semantic-ui/gulpfile.js --cwd src/semantic-ui/ build-assets && ./node_modules/.bin/gulp --gulpfile src/semantic-ui/gulpfile.js --cwd src/semantic-ui/ build-css",
-    "build:package": "./node_modules/.bin/env-cmd config/prod.config ./node_modules/.bin/webpack -p --progress",
     "watch:semantic": "./node_modules/.bin/gulp --gulpfile src/semantic-ui/gulpfile.js --cwd src/semantic-ui/ watch",
-    "watch:local": "./node_modules/.bin/env-cmd config/dev.config ./node_modules/.bin/webpack-dev-server --history-api-fallback",
-    "build": "npm run build:semantic && npm run build:package",
+    "watch:local": "./node_modules/.bin/webpack-dev-server --history-api-fallback --config webpack.dev.js",
+    "watch:local:prod": "./node_modules/.bin/webpack-dev-server --history-api-fallback --config webpack.prod.js",
+    "build:semantic": "./node_modules/.bin/gulp --gulpfile src/semantic-ui/gulpfile.js --cwd src/semantic-ui/ build-assets && ./node_modules/.bin/gulp --gulpfile src/semantic-ui/gulpfile.js --cwd src/semantic-ui/ build-css",
+    "build:package": "./node_modules/.bin/webpack --progress --config webpack.prod.js",
     "local": "./node_modules/.bin/concurrently -k \"npm run watch:semantic\" \"npm run watch:local\"",
-    "stat": "./node_modules/.bin/env-cmd config/prod.config ./node_modules/.bin/webpack -p --json --progress > stats.json"
+    "local:app": "./node_modules/.bin/webpack-dev-server --history-api-fallback --config webpack.dev.js --progress",
+    "local:prod": "./node_modules/.bin/concurrently -k \"npm run watch:semantic\" \"npm run watch:local:prod\"",
+    "build": "npm run build:semantic && npm run build:package",
+    "stats": "./node_modules/.bin/webpack --config webpack.prod.js --progress --json > stats.json"
   },
   "dependencies": {
     "core-decorators": "^0.20.0",
@@ -36,7 +39,6 @@
     "clean-webpack-plugin": "^0.1.17",
     "concurrently": "^3.5.0",
     "css-loader": "^0.28.7",
-    "env-cmd": "^7.0.0",
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.5",
     "gulp": "^3.9.1",
@@ -46,7 +48,9 @@
     "sass-loader": "^6.0.6",
     "semantic-ui": "^2.2.13",
     "style-loader": "^0.19.0",
+    "uglifyjs-webpack-plugin": "^1.1.1",
     "webpack": "^3.8.1",
-    "webpack-dev-server": "^2.9.3"
+    "webpack-dev-server": "^2.9.3",
+    "webpack-merge": "^4.1.1"
   }
 }

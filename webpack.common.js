@@ -5,11 +5,9 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
 	entry: {
-		main: [
-			'babel-polyfill',
-			'./src/index.jsx',
-		],
+		main: './src/index.jsx',
 		vendor: [
+			'babel-polyfill',
 			'react',
 			'react-dom',
 			'react-router-dom',
@@ -25,8 +23,15 @@ module.exports = {
 					{
 						loader: 'babel-loader',
 						options: {
-							presets: ['react', 'env'],
-							plugins: ['transform-class-properties', 'transform-decorators-legacy', 'syntax-dynamic-import'],
+							presets: [
+								'react', 
+								'env', 
+							],
+							plugins: [
+								'transform-class-properties', 
+								'transform-decorators-legacy', 
+								'syntax-dynamic-import', 
+							],
 						}
 					},
 				],
@@ -61,12 +66,6 @@ module.exports = {
 	plugins: [
 		new CleanWebpackPlugin(['dist/*']),
 
-		new webpack.DefinePlugin({
-			'process.env':{
-				'NODE_ENV': JSON.stringify(process.env.NODE_ENV),
-			}
-		}),
-
 		new webpack.HashedModuleIdsPlugin(),
 		
 		new webpack.optimize.CommonsChunkPlugin({
@@ -90,5 +89,4 @@ module.exports = {
 		chunkFilename: 'js/[name].[chunkhash].js',
 		publicPath: '/',
 	},
-	devtool: 'source-map',
 };
