@@ -2,7 +2,7 @@
   "name": "react-semantic-ui-start-kit",
   "description": "A starter kit for spinning up a React and Semantic-UI frontend project",
   "version": "1.0.0",
-  "main": "src/index.js",
+  "main": "src/index.jsx",
   "author": "bwyap",
   "license": "MIT",
   "private": true,

@@ -6,7 +6,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 module.exports = {
 	entry: {
 		main: [
-			'./src/index.js'
+			'./src/index.jsx'
 		],
 		'vendor-ui': [
 			'react',
@@ -21,7 +21,7 @@ module.exports = {
 	module: {
 		rules: [
 			{
-				test: /\.js?$/,
+				test: /\.(js|jsx)?$/,
 				exclude: /(node_modules)/,
 				use: [
 					{
@@ -56,6 +56,9 @@ module.exports = {
 				loader: 'file-loader', options: {name: 'images/[name].[ext]'}
 			}
 		]
+	},
+	resolve: {
+		extensions: ['*', '.js', '.jsx'],
 	},
 	output: {
 		path: __dirname + '/dist',
