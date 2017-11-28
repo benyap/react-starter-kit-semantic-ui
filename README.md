@@ -1,4 +1,4 @@
-# React and Semantic UI Starter Kit
+# React Starter Kit with Semantic UI
 
 This repository contains boilerplate code to help kickstart a frontend project with [React](https://reactjs.org), using the [React Semantic UI](https://react.semantic-ui.com/) integration. The aim of this project is for developers to be able to clone this repository and make a start on development without having to set up all the boilerplate code that is the same every time. Clone the repository, run the build script and you're ready to create a beautiful React application! Also comes pre-installed with [React Router](https://reacttraining.com/react-router/) for all your Single Page Application routing needs. 
 
@@ -81,12 +81,28 @@ The files inside `src/app` can be customised in any way to build your applicatio
 
 This will use `webpack-dev-server` to serve the assets, and watch source files for any changes. Note that you do not need to run `npm run build:semantic` again once you've built the Semantic UI assets once as `npm run local` will watch the source for any changes and rebuild the assets. 
 
+##### Running the project locally (app only)
+
+Use this method if you do not intend to modify any Semantic UI components. Changes to the source inside `src/semantic-ui` will not be compiled in this mode. 
+
+1. As previously mentioned, if you have never built the project before, run the command `npm run build:semantic` to build the Semantic UI assets for the first time (yes, this step is still required).
+2. Run `npm run local:app` to build and serve the project on `http://localhost:8080`.
+
+
 ### Building for production
 
 **IMPORTANT:** this build currently includes ALL Semantic UI components in the package, as it is not yet optimized with treeshaking correctly. Hopefully this will be fixed in the future!
 
 1. Run the command `npm run build`.
 2. This should output the build files into the folder `dist`. You may upload these files to a server for static web hosting. 
+
+##### Building for production (app only)
+
+Use this method if the Semantic UI components have not been modified since the last build. This command will execute the build quicker as it will not recompile the Semantic UI assets. 
+
+1. Run the command `npm run build:package`.
+2. This should output the build files into the folder `dist`. You may upload these files to a server for static web hosting. 
+
 
 ## Notes on conventions used
 
