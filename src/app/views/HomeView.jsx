@@ -15,7 +15,7 @@ export class HomeView extends React.Component {
 							icon='github'
 							content='View on GitHub'
 							labelPosition='left'
-							href='https://github.com/bwyap/react-semantic-ui-starter-kit' 
+							href='https://github.com/bwyap/react-starter-kit-semantic-ui'
 							target='_blank'/>
 					</div>
 				</Title>

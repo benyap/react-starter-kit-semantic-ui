@@ -1,7 +1,7 @@
 $block: component-sidebarMenu;
 
 .#{$block} {
-	height: inherit;
+	height: 100%;
 
 	&.pushable > .pusher {
 		height: 100vh;

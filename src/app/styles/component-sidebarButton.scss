@@ -1,0 +1,8 @@
+$block: component-sidebarButton;
+
+button.ui.button.#{$block} {
+	float: left;
+	margin: 0.5rem 0.5rem 0 0;
+	background: none;
+	color: white;
+}
