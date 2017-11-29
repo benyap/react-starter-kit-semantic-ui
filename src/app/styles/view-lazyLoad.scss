@@ -1,5 +1,7 @@
+@import 'view';
+
 $block: view-lazyLoad;
 
 .#{$block} {
-	
+	@include view;
 }
