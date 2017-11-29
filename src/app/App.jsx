@@ -3,6 +3,7 @@ import autobind from 'core-decorators/es/autobind';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { Transition, Button } from 'semantic-ui-react';
 import asyncComponent from './components/AsyncComponent';
+import { Footer } from './components/Footer';
 import { SidebarMenu } from './components/SidebarMenu';
 import { HomeView } from './views/HomeView';
 import { NotFoundView } from './views/NotFoundView';
@@ -41,7 +42,8 @@ class App extends React.Component {
 						<Route exact path='/lazy' component={LazyLoadView}/>
 						<Route component={NotFoundView}/>
 					</Switch>
-
+					
+					<Footer/>
 				</SidebarMenu>
 			</BrowserRouter>
 		);

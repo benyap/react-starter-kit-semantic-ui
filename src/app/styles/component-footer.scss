@@ -1,0 +1,22 @@
+$block: component-footer;
+
+.#{$block} {
+	height: 4rem;
+	color: white;
+	background-color: #6f7381;
+
+	.#{$block}__text {
+		padding: 1rem;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		a {
+			color: rgb(208, 228, 252);
+
+			&:hover {
+				color: rgb(251, 255, 228);
+			}
+		}
+	}
+}
