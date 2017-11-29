@@ -1,0 +1,12 @@
+$block: component-showcase--button;
+
+.#{$block} {
+	button.ui {
+		margin-bottom: 0.5rem;
+	}
+
+	.ui.buttons {
+		margin-bottom: 0.5rem;
+		margin-right: 0.5rem;
+	}
+}

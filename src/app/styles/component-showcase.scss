@@ -1,0 +1,13 @@
+$block: component-showcase;
+
+.#{$block} {
+	padding: 1rem;
+
+	.#{$block}__divider {
+		height: 0.8rem;
+
+		&--form {
+			height: 2rem;
+		}
+	}
+}

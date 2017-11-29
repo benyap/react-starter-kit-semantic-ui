@@ -25,6 +25,10 @@ export class SidebarMenu extends React.Component {
 						<Icon name='home'/>
 						Home
 					</Menu.Item>
+					<Menu.Item as={Link} to='/showcase' onClick={toggleSidebar}>
+						<Icon name='block layout'/>
+						Showcase
+					</Menu.Item>
 					<Menu.Item as={Link} to='/lazy' onClick={toggleSidebar}>
 						<Icon name='download'/>
 						Lazy Load

@@ -6,6 +6,7 @@ import asyncComponent from './components/AsyncComponent';
 import { Footer } from './components/Footer';
 import { SidebarMenu } from './components/SidebarMenu';
 import { HomeView } from './views/HomeView';
+import { ShowcaseView } from './views/ShowcaseView';
 import { NotFoundView } from './views/NotFoundView';
 
 import './styles/_base.scss';
@@ -40,6 +41,7 @@ class App extends React.Component {
 					{/* Routes */}
 					<Switch>
 						<Route exact path='/' component={HomeView}/>
+						<Route exact path='/showcase' component={ShowcaseView}/>
 						<Route exact path='/lazy' component={LazyLoadView}/>
 						<Route component={NotFoundView}/>
 					</Switch>

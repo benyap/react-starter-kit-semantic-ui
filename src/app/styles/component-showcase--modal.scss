@@ -1,0 +1,9 @@
+$block: component-showcase--modal;
+
+.#{$block} {
+	.#{$block}__buttonGroup {
+		button.ui.button {
+			margin-bottom: 0.5rem;
+		}
+	}
+}
