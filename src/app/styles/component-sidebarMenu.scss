@@ -3,7 +3,8 @@ $block: component-sidebarMenu;
 .#{$block} {
 	height: inherit;
 
-	.pusher {
+	&.pushable > .pusher {
 		height: 100vh;
+		overflow: auto;
 	}
 }
