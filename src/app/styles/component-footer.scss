@@ -3,7 +3,7 @@ $block: component-footer;
 .#{$block} {
 	height: 4rem;
 	color: white;
-	background-color: #6f7381;
+	background-color: #233347;
 
 	.#{$block}__text {
 		padding: 1rem;
@@ -12,10 +12,10 @@ $block: component-footer;
 		justify-content: space-between;
 
 		a {
-			color: rgb(208, 228, 252);
+			color: rgb(193, 221, 253);
 
 			&:hover {
-				color: rgb(251, 255, 228);
+				color: rgb(228, 240, 255);
 			}
 		}
 	}
