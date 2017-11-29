@@ -53,7 +53,7 @@ export class HomeView extends React.Component {
 					</Header>
 					<p>
 						<a href='http://reactjs.org'>React</a> is a JavaScript Frontend framework developed by <a href='https://code.facebook.com/projects/'>Facebook Open Source</a>.
-						It allows developers to use a component-based system to build a modular, reusable user interface. 
+						It allows developers to use a component-based system to build a modular, reusable user interfaces. 
 					</p>
 
 					<Header as='h3'>
@@ -81,7 +81,7 @@ export class HomeView extends React.Component {
 					<p>
 						Some useful breakpoint mixins are provided in the <code>src/app/styles/_bp.scss</code> file. 
 						They are provided for convenience when creating responsive design and use a mobile-first approach. 
-						View the README.md file in the <code>src/app/styles</code> folder in the project source for more details on how to use the mixins.
+						View the <a href='https://github.com/bwyap/react-starter-kit-semantic-ui/tree/master/src/app/styles'>README.md</a> file in the <code>src/app/styles</code> folder in the project source for more details on how to use the mixins.
 					</p>
 
 					<Header as='h3'>
