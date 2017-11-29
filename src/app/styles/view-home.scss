@@ -4,9 +4,4 @@ $block: view-home;
 
 .#{$block} {
 	@include view;
-
-	.#{$block}__button-container {
-		padding: 3rem 0 3rem 0;
-		text-align: center;
-	}
 }

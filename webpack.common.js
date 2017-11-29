@@ -1,12 +1,17 @@
 const webpack = require('webpack');
+const resolve = require('path').resolve;
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
+
+const extractAppStyles = new ExtractTextPlugin('css/app.[contenthash].css');
+const extractVendorStyles = new ExtractTextPlugin('css/vendor.[contenthash].css');
+
 
 // This contains shared configuration for dev and prod builds
 module.exports = {
 	entry: {
 		// All App source files will be compiled into main
-		main: './src/index.jsx',
+		app: './src/index.jsx',
 
 		// All vendor files will be compiled into vendor.
 		// You should add new packages you install here. 
@@ -45,7 +50,21 @@ module.exports = {
 			// Compile SCSS files
 			{
 				test: /\.scss$/,
-				use: ExtractTextPlugin.extract({
+				// This compiles styles specific to this app
+				include: resolve(__dirname, './src/app/styles'),
+				use: extractAppStyles.extract({
+					fallback: 'style-loader',
+					use: [
+						{ loader: 'css-loader', options: { minimize: true, sourceMap: true } },
+						{ loader: 'sass-loader', options: { sourceMap: true } },
+					]
+				}),
+			},
+			{
+				test: /\.scss$/,
+				// This compiles styles from Semantic-UI				
+				include: resolve(__dirname, './src/assets'),
+				use: extractVendorStyles.extract({
 					fallback: 'style-loader',
 					use: [
 						{ loader: 'css-loader', options: { minimize: true, sourceMap: true } },
@@ -84,8 +103,9 @@ module.exports = {
 			name: 'commons'
 		}),
 
-		// Extract inline styles into a separate css file
-		new ExtractTextPlugin('css/[name].[chunkhash].css'),
+		// Extract styles into a separate css files
+		extractAppStyles,
+		extractVendorStyles,
 		
 		new HTMLWebpackPlugin({
 			filename: 'index.html',

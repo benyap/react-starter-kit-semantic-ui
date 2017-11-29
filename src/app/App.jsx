@@ -9,7 +9,8 @@ import { HomeView } from './views/HomeView';
 import { ShowcaseView } from './views/ShowcaseView';
 import { NotFoundView } from './views/NotFoundView';
 
-import './styles/_base.scss';
+import '../assets/vendor.scss';
+import './styles/_global.scss';
 import './styles/component-sidebarButton.scss';
 
 

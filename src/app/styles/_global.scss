@@ -1,0 +1,12 @@
+div.base__code-snippet {
+	margin: .2rem 0 .5rem 0;
+	padding: 1rem;
+	font-family: monospace;
+	font-size: smaller;
+	background-color: #e9f2fc;
+
+	&--center {
+		@extend .base__code-snippet;
+		text-align: center;
+	}
+}

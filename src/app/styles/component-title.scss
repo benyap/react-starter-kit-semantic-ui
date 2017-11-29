@@ -6,13 +6,20 @@ $block: component-title;
 	background-color: #365475;
 	min-height: 60vh;
 	margin-bottom: 2rem;
+	padding: 0 1rem;
 
 	@include bp-above(xs) {
 		min-height: 55vh;
 	}
+	
+	.#{$block}__button-container {
+		padding-bottom: 3rem;
+		text-align: center;
+	}
 
 	h1.ui.header {
-		margin: 0 2.5rem;
+		margin-bottom: 0;
+		padding-bottom: 2.5rem;
 		color: white;
 		font-size: 2rem;
 		padding-top: 20vh;
