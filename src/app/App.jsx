@@ -7,6 +7,8 @@ import { SidebarMenu } from './components/SidebarMenu';
 import { HomeView } from './views/HomeView';
 import { NotFoundView } from './views/NotFoundView';
 
+import './styles/_semantic.scss';
+
 
 // Dynamically import components
 const LazyLoadView = asyncComponent(() => 

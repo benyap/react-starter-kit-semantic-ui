@@ -4,6 +4,7 @@ const common = require('./webpack.common.js');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
+// This is the configuration used when building for the prod environment
 module.exports = merge(common, {
 	devtool: 'source-map',
 	plugins: [
