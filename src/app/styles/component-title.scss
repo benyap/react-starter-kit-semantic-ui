@@ -5,19 +5,20 @@ $block: component-title;
 .#{$block} {
 	background-color: #365475;
 	min-height: 60vh;
+	margin-bottom: 2rem;
 
 	@include bp-above(xs) {
 		min-height: 55vh;
 	}
 
 	h1.ui.header {
-		margin: 0 3rem;
+		margin: 0 2.5rem;
 		color: white;
-		font-size: 1.8rem;
+		font-size: 2rem;
 		padding-top: 20vh;
 
 		@include bp-above(xs) {
-			font-size: 2rem;
+			font-size: 3rem;
 			padding-top: 30vh;
 		}
 	

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Message, Icon } from 'semantic-ui-react';
-import { Title } from '../components/Title';
+import { TitleWithIcon } from '../components/TitleWithIcon';
 import { ButtonShowcase } from '../components/showcase/ButtonShowcase';
 import { InputShowcase } from '../components/showcase/InputShowcase';
 import { MessageShowcase } from '../components/showcase/MessageShowcase';
@@ -17,10 +17,10 @@ export class ShowcaseView extends React.Component {
 	render() {
 		return (
 			<div className='view-showcase'>
-				<Title text='Component showcase' subtext='Some of the best from Semantic UI'>
-				</Title>
+				<TitleWithIcon text='Component showcase' icon='block layout'
+					subtext='Some of the best from Semantic UI'/>
+
 				<Container text>
-					<br/>
 					<Message info icon>
 						<Icon name='idea'/>
 						<Message.Content>
