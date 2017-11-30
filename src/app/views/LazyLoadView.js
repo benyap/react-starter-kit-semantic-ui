@@ -43,8 +43,20 @@ export class LazyLoadView extends React.Component {
 					</Header>
 					<p>
 						Luckily for you, the Webpack configuration has been set up for you to do this easily.
-						Use the <code>asyncComponent</code> function provided to wrap the component you want to lazy load.
+						Use the <code>asyncComponent</code> function provided to wrap the component you want to lazy load,
+						then use a dynamic import to import the component. 
 						See <a href='https://github.com/bwyap/react-starter-kit-semantic-ui/blob/master/src/app/App.jsx'><code>App.jsx</code></a> for an example of how this is done. 
+					</p>
+
+					<Header as='h2'>
+						Fail-safe
+					</Header>
+					<p>
+						In the event that your user gets disconnected from the internet and is unable to retrieve a lazy loaded component,
+						it is good practice to include a fail-safe. 
+						You can see this in action if you navigate to the home page, clear your cache, stop the local development server, then try to load this page.
+						You should see a user friendly error screen. 
+						Once you start the local development server again, the component should load once you navigate away from the page then back again. 
 					</p>
 				</Container>
 			</div>

@@ -8,6 +8,7 @@ import { SidebarMenu } from './components/SidebarMenu';
 import { HomeView } from './views/HomeView';
 import { ShowcaseView } from './views/ShowcaseView';
 import { NotFoundView } from './views/NotFoundView';
+import { LazyLoadFailView } from './views/LazyLoadFailView';
 
 import '../assets/vendor.scss';
 import './styles/_global.scss';
@@ -16,7 +17,9 @@ import './styles/component-sidebarButton.scss';
 
 // Dynamically import components
 const LazyLoadView = asyncComponent(() => 
-	import(/* webpackChunkName: "LazyLoadView" */'./views/LazyLoadView').then(module => module.default)
+	import(/* webpackChunkName: "LazyLoadView" */'./views/LazyLoadView')
+		.then(module => module.default)
+		.catch(() => LazyLoadFailView)
 );
 
 @autobind
