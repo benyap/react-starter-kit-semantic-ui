@@ -8,6 +8,7 @@ import { Footer } from './components/Footer';
 import { SidebarMenu } from './components/SidebarMenu';
 import { HomeView } from './views/HomeView';
 import { ShowcaseView } from './views/ShowcaseView';
+import { DataFetchView } from './views/DataFetchView';
 import { NotFoundView } from './views/NotFoundView';
 import { LazyLoadFailView } from './views/LazyLoadFailView';
 
@@ -67,6 +68,7 @@ class App extends React.Component {
 					<Switch>
 						<Route exact path='/' component={HomeView}/>
 						<Route exact path='/showcase' component={ShowcaseView}/>
+						<Route exact path='/data' component={DataFetchView}/>
 						<Route exact path='/lazy' component={LazyLoadView}/>
 						<Route component={NotFoundView}/>
 					</Switch>

@@ -21,6 +21,8 @@ module.exports = {
 			'react-dom',
 			'react-router-dom',
 			'semantic-ui-react',
+			'dateformat',
+			'axios'
 		]
 	},
 	module: {

@@ -19,6 +19,7 @@
     "stats": "$(npm bin)/webpack --config webpack.prod.js --progress --json > stats.json"
   },
   "dependencies": {
+    "axios": "^0.17.1",
     "core-decorators": "^0.20.0",
     "dateformat": "^3.0.2",
     "prop-types": "^15.6.0",
