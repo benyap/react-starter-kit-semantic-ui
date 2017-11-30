@@ -1,6 +1,8 @@
 import React from 'react';
+import { LazyComponentLoading } from './LazyComponentLoading';
 
-export default function asyncComponent(getComponent) {
+
+export default function asyncComponent(getComponent, loadingComponent = LazyComponentLoading) {
 	class AsyncComponent extends React.Component {
 		static Component = null;
 
@@ -22,7 +24,7 @@ export default function asyncComponent(getComponent) {
 			if (Component) {
 				return <Component {...this.props}/>
 			}
-			return null;
+			return <LazyComponentLoading/>;
 		}
 	}
 

@@ -15,12 +15,32 @@ import './styles/_global.scss';
 import './styles/component-sidebarButton.scss';
 
 
-// Dynamically import components
-const LazyLoadView = asyncComponent(() => 
-	import(/* webpackChunkName: "LazyLoadView" */'./views/LazyLoadView')
+// =================
+//  DYANMIC IMPORTS
+// =================
+
+// Function to simulate sleep
+const sleep = function(ms) {
+	return new Promise((resolve, reject) => {
+		setTimeout(resolve, ms);
+	});
+}
+
+// Dynamically import LazyLoadView component
+const LazyLoadView = asyncComponent(async () => {
+	// Delay component load by 2 seconds to show loading view
+	await sleep(2000);
+
+	// Dynamically import the component
+	return import(/* webpackChunkName: "LazyLoadView" */'./views/LazyLoadView')
 		.then(module => module.default)
 		.catch(() => LazyLoadFailView)
-);
+});
+
+// =====================
+//  END DYANMIC IMPORTS
+// =====================
+
 
 @autobind
 class App extends React.Component {

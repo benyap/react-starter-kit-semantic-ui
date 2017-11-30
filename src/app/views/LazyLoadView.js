@@ -47,6 +47,14 @@ export class LazyLoadView extends React.Component {
 						then use a dynamic import to import the component. 
 						See <a href='https://github.com/bwyap/react-starter-kit-semantic-ui/blob/master/src/app/App.jsx'><code>App.jsx</code></a> for an example of how this is done. 
 					</p>
+					<p>
+						The <code>asyncComponent</code> function returns a full height loading component while it is loading,
+						simluated by a <code>setTimeout</code> function. 
+						You might want to customise this behaviour - 
+						pass in a custom component to render, or pass in null, 
+						as the second argument to override the default laoding component.
+						Be sure to check out the source code to understand how it works.
+					</p>
 
 					<Header as='h2'>
 						Fail-safe
