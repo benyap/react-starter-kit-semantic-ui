@@ -1,5 +1,5 @@
 import React from 'react';
-import { LazyComponentLoading } from './LazyComponentLoading';
+import { LazyLoadLoadingComponent } from '../components/LazyLoadLoadingComponent';
 
 
 /**
@@ -9,7 +9,7 @@ import { LazyComponentLoading } from './LazyComponentLoading';
  * @param {*} getComponent A function that returns a promise using a dynamic import
  * @param {*} loadingComponent The component to override the default loading component that gets rendered
  */
-export default function asyncComponent(getComponent, loadingComponent = <LazyComponentLoading/>) {
+export default function asyncComponent(getComponent, loadingComponent = <LazyLoadLoadingComponent/>) {
 	class AsyncComponent extends React.Component {
 		static Component = null;
 

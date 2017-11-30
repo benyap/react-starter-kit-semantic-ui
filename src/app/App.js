@@ -3,6 +3,7 @@ import autobind from 'core-decorators/es/autobind';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { Transition, Button } from 'semantic-ui-react';
 import asyncComponent from './components/AsyncComponent';
+import { LazyLoadLoadingView } from './components/LazyLoadLoadingView';
 import { Footer } from './components/Footer';
 import { SidebarMenu } from './components/SidebarMenu';
 import { HomeView } from './views/HomeView';
@@ -35,7 +36,7 @@ const LazyLoadView = asyncComponent(async () => {
 	return import(/* webpackChunkName: "LazyLoadView" */'./views/LazyLoadView')
 		.then(module => module.default)
 		.catch(() => LazyLoadFailView)
-});
+}, <LazyLoadLoadingView/>);
 
 // =====================
 //  END DYANMIC IMPORTS

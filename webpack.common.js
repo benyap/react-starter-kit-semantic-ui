@@ -62,7 +62,7 @@ module.exports = {
 			},
 			{
 				test: /\.scss$/,
-				// This compiles styles from Semantic-UI				
+				// This compiles styles from Semantic-UI
 				include: resolve(__dirname, './src/assets'),
 				use: extractVendorStyles.extract({
 					fallback: 'style-loader',
