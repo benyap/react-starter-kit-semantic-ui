@@ -6,7 +6,7 @@ This repository contains boilerplate code to help kickstart a frontend project w
 
 ### React
 
-React is a JavaScript Frontend framework developed by Facebook Open Source, and it is what this project is built upon. Find out more at the [official website](https://reactjs.org). 
+React is a JavaScript Frontend framework developed by [Facebook Open Source](https://code.facebook.com/projects/), It allows developers to use a component-based system to build a modular, reusable user interfaces. Find out more at the [official website](https://reactjs.org). 
 
 ### React Semantic UI
 
@@ -14,11 +14,15 @@ React Semantic UI is a port of the [Semanic UI](https://semantic-ui.com/) librar
 
 ### React Router
 
-React Router is a vital part of the React ecosystem that provides routing for Singe Page Applications. It enables you to build a full blown application with static and dynamic routes right within React, which allows the whole site to be served as a statically. Find out more at the [official website](https://reacttraining.com/react-router/). 
+React Router is a vital part of the React ecosystem that provides routing for Singe Page Applications. It enables you to build a full blown application with static and dynamic routes right within React, which allows the whole site to be served as a static HTML file, purely managed by JavaScript. Find out more at the [official website](https://reacttraining.com/react-router/). 
 
 ### SCSS Breakpoints
 
-Some useful breakpoint mixins are provided in the `src/app/styles/_bp.scss` file. They are provided for convenience and use a mobile-first approach. View the `README.md` file in the `src/app/styles` folder for more details on how to use the mixins. 
+Some useful breakpoint mixins are provided in the `src/app/styles/_bp.scss` file. They are provided for convenience when creating responsive design and use a mobile-first approach. View the `README.md` file in the `src/app/styles` folder for more details on how to use the mixins. 
+
+### Webpack 3
+
+[Webpack](https://webpack.js.org/) is a code bundler that allows you to transpile, transform and bundle your code for deployment. This project comes with two pre-configured Webpack build processes - one optimised for development, and one optimised for production. The configurations support SCSS transpilation, code splitting and dynamic imports, ES6 syntax, as well as async-await and decorators.
 
 ## What's provided
 
