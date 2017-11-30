@@ -11,7 +11,7 @@ const extractVendorStyles = new ExtractTextPlugin('css/vendor.[contenthash].css'
 module.exports = {
 	entry: {
 		// All App source files will be compiled into main
-		app: './src/index.jsx',
+		app: './src/index.js',
 
 		// All vendor files will be compiled into vendor.
 		// You should add new packages you install here. 
