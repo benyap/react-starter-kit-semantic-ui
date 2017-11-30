@@ -40,12 +40,11 @@ export class HomeView extends React.Component {
 						git clone https://github.com/bwyap/react-starter-kit-semantic-ui.git
 					</div>
 					<p>
-						Then follow <a href='https://github.com/bwyap/react-starter-kit-semantic-ui#how-to-use-this-project'>the instructions</a> in the README.md file
-						under the "How to use this project" section. 
+						Then follow <a href='https://github.com/bwyap/react-starter-kit-semantic-ui#how-to-use-this-project'>the instructions</a> in the README.md file in the "How to use this project" section. 
 					</p>
 
 					<Header as='h2'>
-						Features
+						Technologies
 					</Header>
 
 					<Header as='h3'>
