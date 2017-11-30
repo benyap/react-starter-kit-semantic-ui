@@ -16,9 +16,9 @@ React Semantic UI is a port of the [Semanic UI](https://semantic-ui.com/) librar
 
 React Router is a vital part of the React ecosystem that provides routing for Singe Page Applications. It enables you to build a full blown application with static and dynamic routes right within React, which allows the whole site to be served as a static HTML file, purely managed by JavaScript. Find out more at the [official website](https://reacttraining.com/react-router/). 
 
-### SCSS Breakpoints
+### Sass (with breakpoints!)
 
-Some useful breakpoint mixins are provided in the `src/app/styles/_bp.scss` file. They are provided for convenience when creating responsive design and use a mobile-first approach. View the `README.md` file in the `src/app/styles` folder for more details on how to use the mixins. 
+[Sass](http://sass-lang.com) is an extension to CSS which allows you to use nesting, variables, mixins and more, allowing you to better organise and write more powerful CSS with little effort. Additionally, some useful breakpoint mixins are provided in the `src/app/styles/_bp.scss` file. View the [README.md](https://github.com/bwyap/react-starter-kit-semantic-ui/tree/master/src/app/styles) file in the `src/app/styles` folder in the project source for more details on how to use the mixins.
 
 ### Webpack 3
 

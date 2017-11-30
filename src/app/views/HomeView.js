@@ -75,11 +75,12 @@ export class HomeView extends React.Component {
 					</p>
 
 					<Header as='h3'>
-						SCSS Breakpoints
+						Sass (with breakpoints!)
 					</Header>
 					<p>
-						Some useful breakpoint mixins are provided in the <code>src/app/styles/_bp.scss</code> file. 
-						They are provided for convenience when creating responsive design and use a mobile-first approach. 
+						<a href='http://sass-lang.com'>Sass</a> is an extension to CSS which allows you to use nesting, variables, mixins and more,
+						allowing you to better organise and write more powerful CSS with little effort. 
+						Additionally, some useful breakpoint mixins are provided in the <code>src/app/styles/_bp.scss</code> file. 
 						View the <a href='https://github.com/bwyap/react-starter-kit-semantic-ui/tree/master/src/app/styles'>README.md</a> file in the <code>src/app/styles</code> folder in the project source for more details on how to use the mixins.
 					</p>
 
