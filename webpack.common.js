@@ -106,6 +106,12 @@ module.exports = {
 		// Extract styles into a separate css files
 		extractAppStyles,
 		extractVendorStyles,
+
+		new webpack.DefinePlugin({
+			'process.env':{
+				'BUILD_DATE': JSON.stringify(new Date())
+			}
+		}),
 		
 		new HTMLWebpackPlugin({
 			filename: 'index.html',
