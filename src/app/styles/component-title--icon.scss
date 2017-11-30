@@ -1,6 +1,6 @@
-@import 'component-title';
+@import 'component-Title';
 
-$block: component-title;
+$block: component-Title;
 
 .#{$block}--icon {
 	@extend .#{$block};

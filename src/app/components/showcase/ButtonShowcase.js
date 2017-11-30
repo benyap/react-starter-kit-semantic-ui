@@ -1,14 +1,14 @@
 import React from 'react'
 import { Header, Button, Icon } from 'semantic-ui-react'
 
-import '../../styles/component-showcase.scss';
-import '../../styles/component-showcase--button.scss';
+import '../../styles/component-Showcase.scss';
+import '../../styles/component-Showcase--button.scss';
 
 
 export class ButtonShowcase extends React.Component {
 	render() {
 		return (
-			<div className='component-showcase component-showcase--button'>
+			<div className='component-Showcase component-Showcase--button'>
 				<Header as='h2'>
 					Button
 					<Header.Subheader>
@@ -20,7 +20,7 @@ export class ButtonShowcase extends React.Component {
 				<Button basic>Click Here</Button>
 				<Button loading primary>Loading</Button>
 				<Button loading secondary>Loading</Button>
-				<div className='component-showcase__divider'></div>
+				<div className='component-Showcase__divider'></div>
 
 				<Button icon='world'/>
 				<Button content='Pause' icon='pause' labelPosition='left' />
@@ -29,7 +29,7 @@ export class ButtonShowcase extends React.Component {
 					icon='heart'
 					label={{ as: 'a', basic: true, content: '2,048' }}
 					labelPosition='right'/>
-				<div className='component-showcase__divider'></div>
+				<div className='component-Showcase__divider'></div>
 
 				<Button animated>
 					<Button.Content visible>Next</Button.Content>
@@ -51,7 +51,7 @@ export class ButtonShowcase extends React.Component {
 						$12.99 a month
 					</Button.Content>
 				</Button>
-				<div className='component-showcase__divider'></div>
+				<div className='component-Showcase__divider'></div>
 
 				<Button.Group>
 					<Button icon='bold' />
@@ -63,7 +63,7 @@ export class ButtonShowcase extends React.Component {
 					<Button.Or />
 					<Button positive>Save</Button>
 				</Button.Group>
-				<div className='component-showcase__divider'></div>
+				<div className='component-Showcase__divider'></div>
 				
 				<Button color='facebook'>
 					<Icon name='facebook' /> Facebook

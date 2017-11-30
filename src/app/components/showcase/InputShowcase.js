@@ -1,8 +1,8 @@
 import React from 'react'
 import { Header, Icon, Input, Dropdown } from 'semantic-ui-react'
 
-import '../../styles/component-showcase.scss';
-import '../../styles/component-showcase--input.scss';
+import '../../styles/component-Showcase.scss';
+import '../../styles/component-Showcase--input.scss';
 
 
 const options = [
@@ -14,7 +14,7 @@ const options = [
 export class InputShowcase extends React.Component {
 	render() {
 		return (
-			<div className='component-showcase component-showcase--input'>
+			<div className='component-Showcase component-Showcase--input'>
 				<Header as='h2'>
 					Input
 					<Header.Subheader>
@@ -24,11 +24,11 @@ export class InputShowcase extends React.Component {
 
 				<Input placeholder='Search...'/>
 				<Input error placeholder='Search...'/>
-				<div className='component-showcase__divider'></div>
+				<div className='component-Showcase__divider'></div>
 
 				<Input loading icon='user' placeholder='Search...'/>
 				<Input icon='search' placeholder='Search...' />
-				<div className='component-showcase__divider'></div>
+				<div className='component-Showcase__divider'></div>
 
 				<Input iconPosition='left' placeholder='Email'>
 					<Icon name='at' />
@@ -38,7 +38,7 @@ export class InputShowcase extends React.Component {
 					label={{ basic: true, content: 'kg' }}
 					labelPosition='right'
 					placeholder='Enter weight...'/>
-				<div className='component-showcase__divider'></div>
+				<div className='component-Showcase__divider'></div>
 
 				<Input label='http://' placeholder='mysite.com' />
 				<Input
