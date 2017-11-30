@@ -2,13 +2,13 @@ import React from 'react';
 import { Header, Container } from 'semantic-ui-react';
 import { TitleWithIcon } from '../components/TitleWithIcon';
 
-import '../styles/view-lazyLoad.scss';
+import '../styles/view.scss';
 
 
 export class LazyLoadView extends React.Component {
 	render() {
 		return (
-			<div className='view-lazyLoad'>
+			<div className='view view-lazyLoad'>
 				<TitleWithIcon text='LazyLoad example' icon='download'
 					subtext='Only download what you need'/>
 				<Container text>

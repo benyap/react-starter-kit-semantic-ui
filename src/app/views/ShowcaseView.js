@@ -10,13 +10,13 @@ import { DropdownShowcase } from '../components/showcase/DropdownShowcase';
 import { ModalShowcase } from '../components/showcase/ModalShowcase';
 import { CardShowcase } from '../components/showcase/CardShowcase';
 
-import '../styles/view-showcase.scss';
+import '../styles/view.scss';
 
 
 export class ShowcaseView extends React.Component {
 	render() {
 		return (
-			<div className='view-showcase'>
+			<div className='view view-showcase'>
 				<TitleWithIcon text='Component showcase' icon='block layout'
 					subtext='Some of the best from Semantic UI'/>
 

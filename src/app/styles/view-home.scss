@@ -1,7 +1,0 @@
-@import 'view';
-
-$block: view-home;
-
-.#{$block} {
-	@include view;
-}

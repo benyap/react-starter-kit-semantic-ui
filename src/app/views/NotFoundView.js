@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, Icon, Container } from 'semantic-ui-react'
 import { TitleWithIcon } from '../components/TitleWithIcon';
 
-import '../styles/view-notFound.scss';
+import '../styles/view.scss';
 
 
 export class NotFoundView extends React.Component {
@@ -10,7 +10,7 @@ export class NotFoundView extends React.Component {
 		const { location, history } = this.props;
 		
 		return (
-			<div className='view-notFound'>
+			<div className='view view-notFound'>
 				<TitleWithIcon text='Page not found.' icon='warning circle'
 					subtext={<span>The route at <code>{location.pathname}</code> doesn't contain anything.</span>}>
 					<div className='component-title__button-container'>

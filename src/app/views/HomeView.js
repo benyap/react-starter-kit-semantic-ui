@@ -2,13 +2,13 @@ import React from 'react';
 import { Header, Button, Container } from 'semantic-ui-react';
 import { Title } from '../components/Title';
 
-import '../styles/view-home.scss';
+import '../styles/view.scss';
 
 
 export class HomeView extends React.Component {
 	render() {
 		return (
-			<div className='view-home'>
+			<div className='view view-home'>
 				<Title text='React starter kit with Semantic UI' subtext='Because boilerplate sucks'>
 					<div className='component-title__button-container'>
 						<Button as='a' 
