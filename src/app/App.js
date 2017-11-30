@@ -60,7 +60,7 @@ class App extends React.Component {
 			<BrowserRouter>
 				<SidebarMenu visible={this.state.sidebarVisible} toggleSidebar={this.toggleSidebar}>
 					<Transition visible={!this.state.sidebarVisible} animation='fade right' duration={500}>
-						<Button size='massive' className='component-sidebarButton' icon='content' onClick={this.toggleSidebar}/>
+						<Button size='massive' className='component-SidebarButton' icon='content' onClick={this.toggleSidebar}/>
 					</Transition>
 					
 					{/* Routes */}
