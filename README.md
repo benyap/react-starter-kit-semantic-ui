@@ -69,6 +69,8 @@ The files inside `src/app` can be customised in any way to build your applicatio
 
 ## How to use this project
 
+**Windows users:** Please use a UNIX based terminal to execute these commands.
+
 ### Installation
 
 1. Clone the repository onto your local machine.
