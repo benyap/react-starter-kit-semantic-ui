@@ -44,7 +44,7 @@ export class LazyLoadView extends React.Component {
 					<p>
 						Luckily for you, the Webpack configuration has been set up for you to do this easily.
 						Use the <code>asyncComponent</code> function provided to wrap the component you want to lazy load.
-						See <a href='https://github.com/bwyap/react-starter-kit-semantic-ui/blob/master/src/app/App.jsx'><code>App.jsx</code></a> for an example of how this is done. 
+						See <a href='https://github.com/bwyap/react-starter-kit-semantic-ui/blob/master/src/app/App.js'><code>App.js</code></a> for an example of how this is done. 
 					</p>
 				</Container>
 			</div>

@@ -30,7 +30,7 @@ export class NotFoundView extends React.Component {
 						Neat little trick, huh?
 					</p>
 					<p>
-						Have a look at <a href='https://github.com/bwyap/react-starter-kit-semantic-ui/blob/master/src/app/App.jsx'><code>App.jsx</code></a> to see how the routes were configured. 
+						Have a look at <a href='https://github.com/bwyap/react-starter-kit-semantic-ui/blob/master/src/app/App.js'><code>App.js</code></a> to see how the routes were configured. 
 						Alternatively, head to the <a href='https://reacttraining.com/react-router/web'>React Router</a> documentation to learn more about how to manage your Single Page Application's routing needs.
 					</p>
 				</Container>
