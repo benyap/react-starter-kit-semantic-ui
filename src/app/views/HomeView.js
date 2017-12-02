@@ -45,6 +45,26 @@ export class HomeView extends React.Component {
 					</p>
 
 					<Header as='h2'>
+						Can't I just use NPM to install Semantic UI React?
+					</Header>
+					<p>
+						If you're already comfortable with setting up your own builds with a build tool like Webpack or Gulp,
+						then yes, you can just do <code>npm install semantic-ui-react</code> to add it to your project.
+						However, the Semantic UI React integration by default <b>does not support custom theming</b>,
+						one of the major selling features of the original Semantic UI library. 
+						This is where this starter kit comes in!
+					</p>
+					<p>
+						This project includes the vanilla <code>semantic-ui</code> package as a development dependency and 
+						uses it to build custom CSS styles that support theming. 
+						The theming files are included in the <code>src/app/semantic-ui/src</code> directory,
+						and you use them just as you would in the vanilla Semantic UI (<a href='https://semantic-ui.com/usage/theming.html'>more info here</a>).
+						The Webpack build has been configured to automatically build the required assets - 
+						just make sure you remember to import the right CSS files and you'll be good to go!
+						Semantic UI styles are imported in the <code>src/assets/vendor.scss</code> file.
+					</p>
+
+					<Header as='h2'>
 						Technologies
 					</Header>
 

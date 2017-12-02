@@ -2,6 +2,22 @@
 
 This repository contains boilerplate code to help kickstart a frontend project with [React](https://reactjs.org), using the [React Semantic UI](https://react.semantic-ui.com/) integration. The aim of this project is for developers to be able to clone this repository and make a start on development without having to set up all the boilerplate code that is the same every time. Clone the repository, run the build script and you're ready to create a beautiful React application! Also comes pre-installed with [React Router](https://reacttraining.com/react-router/) for all your Single Page Application routing needs. 
 
+## Can't I just use NPM to install Semantic UI React?
+
+If you're already comfortable with setting up your own builds with a build tool like Webpack or Gulp,
+then yes, you can just do `npm install semantic-ui-react` to add it to your project.
+However, the Semantic UI React integration by default **does not support custom theming**,
+one of the major selling features of the original Semantic UI library. 
+This is where this starter kit comes in!
+
+This project includes the vanilla `semantic-ui` package as a development dependency and 
+uses it to build custom CSS styles that support theming. 
+The theming files are included in the `src/app/semantic-ui/src` directory,
+and you use them just as you would in the vanilla Semantic UI ([more info here](https://semantic-ui.com/usage/theming.html)).
+The Webpack build has been configured to automatically build the required assets - 
+just make sure you remember to import the right CSS files and you'll be good to go!
+Semantic UI styles are imported in the `src/assets/vendor.scss` file.
+
 ## Technologies
 
 ### React
