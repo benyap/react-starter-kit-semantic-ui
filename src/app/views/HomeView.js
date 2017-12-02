@@ -12,6 +12,7 @@ export class HomeView extends React.Component {
 				<Title text='React starter kit with Semantic UI' subtext='Because boilerplate sucks'>
 					<div className='component-Title__button-container'>
 						<Button as='a' 
+							primary
 							icon='github'
 							content='Get from GitHub'
 							labelPosition='left'
