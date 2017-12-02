@@ -19,7 +19,7 @@ export class DataFetchView extends React.Component {
 						instead, it passes its data to a component to render its data.
 					</p>
 					<p>
-						The following container below fetches data from the <a href='https://swapi.co/'>Star Wars API</a> to retrieve a list of all Star Wards films,
+						The following container below fetches data from the <a href='https://swapi.co/'>Star Wars API</a> to retrieve a list of all Star Wars films,
 						and renders the data using a component.
 					</p>
 					<SWAPIFilmListContainer/>
