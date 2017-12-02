@@ -10,10 +10,10 @@ export class LazyLoadFailView extends React.Component {
 		const { location, history } = this.props;
 		
 		return (
-			<div className='view view-lozyLoadFail'>
+			<div className='view view-LazyLoadFail'>
 				<TitleWithIcon text='Failed to load' icon='warning circle'
 					subtext={<span>Could not load <code>{location.pathname}</code> from server.</span>}>
-					<div className='component-title__button-container'>
+					<div className='component-Title__button-container'>
 						<Button animated onClick={history.goBack}>
 							<Button.Content visible>Go back</Button.Content>
 							<Button.Content hidden>

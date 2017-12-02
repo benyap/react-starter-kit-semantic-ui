@@ -63,7 +63,7 @@ const CardShowcase = asyncComponent(async () => {
 export class ShowcaseView extends React.Component {
 	render() {
 		return (
-			<div className='view view-showcase'>
+			<div className='view view-Showcase'>
 				<TitleWithIcon text='Component showcase' icon='block layout'
 					subtext='Some of the best from Semantic UI'/>
 

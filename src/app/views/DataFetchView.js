@@ -9,7 +9,7 @@ import '../styles/view.scss';
 export class DataFetchView extends React.Component {
 	render() {
 		return (
-			<div className='view view-dataFetch'>
+			<div className='view view-DataFetch'>
 				<TitleWithIcon icon='database' text='Data Fetching' subtext='SWAPI - The Star Wars API'/>
 				<Container text>
 					<p>

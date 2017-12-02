@@ -8,7 +8,7 @@ import '../styles/view.scss';
 export class HomeView extends React.Component {
 	render() {
 		return (
-			<div className='view view-home'>
+			<div className='view view-Home'>
 				<Title text='React starter kit with Semantic UI' subtext='Because boilerplate sucks'>
 					<div className='component-Title__button-container'>
 						<Button as='a' 

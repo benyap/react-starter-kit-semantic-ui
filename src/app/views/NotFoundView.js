@@ -10,7 +10,7 @@ export class NotFoundView extends React.Component {
 		const { location, history } = this.props;
 		
 		return (
-			<div className='view view-notFound'>
+			<div className='view view-NotFound'>
 				<TitleWithIcon text='Page not found.' icon='warning circle'
 					subtext={<span>The route at <code>{location.pathname}</code> doesn't contain anything.</span>}>
 					<div className='component-Title__button-container'>

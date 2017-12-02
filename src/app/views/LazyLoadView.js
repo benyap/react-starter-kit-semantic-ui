@@ -8,7 +8,7 @@ import '../styles/view.scss';
 export class LazyLoadView extends React.Component {
 	render() {
 		return (
-			<div className='view view-lazyLoad'>
+			<div className='view view-LazyLoad'>
 				<TitleWithIcon text='LazyLoad example' icon='download'
 					subtext='Only download what you need'/>
 				<Container text>
