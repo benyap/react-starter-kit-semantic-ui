@@ -1,6 +1,6 @@
 # React Starter Kit with Semantic UI
 
-This repository contains boilerplate code to help kickstart a frontend project with [React](https://reactjs.org), using the [React Semantic UI](https://react.semantic-ui.com/) integration. The aim of this project is for developers to be able to clone this repository and make a start on development without having to set up all the boilerplate code that is the same every time. Clone the repository, run the build script and you're ready to create a beautiful React application! Also comes pre-installed with [React Router](https://reacttraining.com/react-router/) for all your Single Page Application routing needs. 
+This repository contains boilerplate code to help kickstart a Single Page Application with [React](https://reactjs.org), using the [React Semantic UI](https://react.semantic-ui.com/) integration. The aim of this project is for developers to be able to clone this repository and make a start on development without having to set up all the boilerplate code that is the same every time. Clone the repository, run the build script and you're ready to create a beautiful React application! Also comes pre-installed with [React Router](https://reacttraining.com/react-router/) for all your SPA routing needs. 
 
 ## Can't I just use NPM to install Semantic UI React?
 
@@ -18,7 +18,7 @@ The Webpack build has been configured to automatically build the required assets
 just make sure you remember to import the right CSS files and you'll be good to go!
 Semantic UI styles are imported in the `src/assets/vendor.scss` file.
 
-## Technologies
+## Technologies included
 
 ### React
 
@@ -44,11 +44,14 @@ React Router is a vital part of the React ecosystem that provides routing for Si
 
 When you run this project for the first time, you are presented with a basic Single Page Application built with React. It contains:
 
-* A landing page showing a kitchen sink containing commonly used Semantic UI components
-* A few links to other basic pages to show the React Router functionality
-* Some basic styling boilerplate SCSS files
+* A beautiful landing page with some basic information
+* A kitchen sink containing commonly used Semantic UI components
+* An example of data fetching from an API using the `axios` library
+* An example of lazy loading components
+* Routing to each page done with React Router
+* Fully responsive pages designed mobile-first :)
 
-That's it! The rest is up to you to implement. 
+That's it! The rest is up to you to change and implement. 
 
 ### Source structure
 
