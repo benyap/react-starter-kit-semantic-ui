@@ -10,10 +10,7 @@ export class Footer extends React.Component {
 			<div className='component-Footer'>
 				<div className='component-Footer__text'>
 					<span>
-						&copy; 2017 // assembled by <a href='https://github.com/bwyap'>bwyap</a>
-					</span>
-					<span>
-						<a href='https://github.com/bwyap/react-starter-kit-semantic-ui/blob/master/LICENSE'>License</a>
+						&copy; 2017 // assembled by <a href='https://github.com/bwyap'>bwyap</a> // <a href='https://github.com/bwyap/react-starter-kit-semantic-ui/blob/master/LICENSE'>license</a>
 					</span>
 					<span>
 						Built on {DateFormat(process.env.BUILD_DATE, 'd mmm yyyy @ HH:MM')}
