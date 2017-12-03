@@ -1,7 +1,7 @@
 import React from 'react'
 import { Header, Button, Message, Icon } from 'semantic-ui-react'
 
-import '../../styles/component-showcase.scss';
+import '../../styles/component-Showcase.scss';
 
 
 export class MessageShowcase extends React.Component {
@@ -17,7 +17,7 @@ export class MessageShowcase extends React.Component {
 	
 	render() {
 		return (
-			<div className='component-showcase component-showcase--message'>
+			<div className='component-Showcase component-Showcase--message'>
 				<Header as='h2'>
 					Message
 					<Header.Subheader>
@@ -33,7 +33,7 @@ export class MessageShowcase extends React.Component {
 						We updated our privacy policy here to better service our customers. We recommend reviewing the changes.
 					</p>
 				</Message>
-				<div className='component-showcase__divider'></div>
+				<div className='component-Showcase__divider'></div>
 				
 				{ this.state.visible ? 
 					<Message
@@ -49,7 +49,7 @@ export class MessageShowcase extends React.Component {
 						<br/>
 					</p>
 				}
-				<div className='component-showcase__divider'></div>
+				<div className='component-Showcase__divider'></div>
 
 				<Message info icon>
 					<Icon name='info circle'/>

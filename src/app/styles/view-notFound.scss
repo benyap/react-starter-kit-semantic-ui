@@ -1,7 +1,0 @@
-@import 'view';
-
-$block: view-notFound;
-
-.#{$block} {
-	@include view;
-}

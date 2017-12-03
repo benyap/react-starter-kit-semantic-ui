@@ -2,7 +2,23 @@
 
 This repository contains boilerplate code to help kickstart a frontend project with [React](https://reactjs.org), using the [React Semantic UI](https://react.semantic-ui.com/) integration. The aim of this project is for developers to be able to clone this repository and make a start on development without having to set up all the boilerplate code that is the same every time. Clone the repository, run the build script and you're ready to create a beautiful React application! Also comes pre-installed with [React Router](https://reacttraining.com/react-router/) for all your Single Page Application routing needs. 
 
-## Features
+## Can't I just use NPM to install Semantic UI React?
+
+If you're already comfortable with setting up your own builds with a build tool like Webpack or Gulp,
+then yes, you can just do `npm install semantic-ui-react` to add it to your project.
+However, the Semantic UI React integration by default **does not support custom theming**,
+one of the major selling features of the original Semantic UI library. 
+This is where this starter kit comes in!
+
+This project includes the vanilla `semantic-ui` package as a development dependency and 
+uses it to build custom CSS styles that support theming. 
+The theming files are included in the `src/app/semantic-ui/src` directory,
+and you use them just as you would in the vanilla Semantic UI ([more info here](https://semantic-ui.com/usage/theming.html)).
+The Webpack build has been configured to automatically build the required assets - 
+just make sure you remember to import the right CSS files and you'll be good to go!
+Semantic UI styles are imported in the `src/assets/vendor.scss` file.
+
+## Technologies
 
 ### React
 
@@ -16,9 +32,9 @@ React Semantic UI is a port of the [Semanic UI](https://semantic-ui.com/) librar
 
 React Router is a vital part of the React ecosystem that provides routing for Singe Page Applications. It enables you to build a full blown application with static and dynamic routes right within React, which allows the whole site to be served as a static HTML file, purely managed by JavaScript. Find out more at the [official website](https://reacttraining.com/react-router/). 
 
-### SCSS Breakpoints
+### Sass (with breakpoints!)
 
-Some useful breakpoint mixins are provided in the `src/app/styles/_bp.scss` file. They are provided for convenience when creating responsive design and use a mobile-first approach. View the `README.md` file in the `src/app/styles` folder for more details on how to use the mixins. 
+[Sass](http://sass-lang.com) is an extension to CSS which allows you to use nesting, variables, mixins and more, allowing you to better organise and write more powerful CSS with little effort. Additionally, some useful breakpoint mixins are provided in the `src/app/styles/_bp.scss` file. View the [README.md](https://github.com/bwyap/react-starter-kit-semantic-ui/tree/master/src/app/styles) file in the `src/app/styles` folder in the project source for more details on how to use the mixins.
 
 ### Webpack 3
 
@@ -68,6 +84,8 @@ The files inside `src/app` can be customised in any way to build your applicatio
 ```
 
 ## How to use this project
+
+**Windows users:** Please use a UNIX based terminal to execute these commands.
 
 ### Installation
 

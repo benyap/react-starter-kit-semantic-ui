@@ -1,7 +1,8 @@
-$block: component-footer;
+@import 'bp';
+
+$block: component-Footer;
 
 .#{$block} {
-	height: 4rem;
 	color: white;
 	background-color: #233347;
 	margin-top: 2rem;
@@ -9,8 +10,22 @@ $block: component-footer;
 	.#{$block}__text {
 		padding: 1rem;
 		display: flex;
-		align-items: center;
-		justify-content: space-between;
+		flex-direction: column;
+		align-items: flex-start;
+
+		span:not(:last-child) {
+			margin-bottom: 0.3rem;
+		}
+
+		@include bp-above(sm) {
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+			
+			span {
+				margin-bottom: 0;
+			}
+		}
 
 		a {
 			color: rgb(193, 221, 253);

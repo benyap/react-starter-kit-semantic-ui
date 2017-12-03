@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Header, Icon } from 'semantic-ui-react'
 
-import '../styles/component-title--icon.scss';
+import '../styles/component-Title--icon.scss';
 
 
 export class TitleWithIcon extends React.Component {
@@ -16,7 +16,7 @@ export class TitleWithIcon extends React.Component {
 		const { text, subtext, icon, children } = this.props;
 
 		return (
-			<div className='component-title--icon'>
+			<div className='component-Title--icon'>
 				<Header as='h1' icon textAlign='center'>
 					<Icon name={icon}/>
 					{text}

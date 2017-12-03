@@ -1,7 +1,7 @@
 import React from 'react'
 import { Header, Form, Button, Checkbox, Message } from 'semantic-ui-react'
 
-import '../../styles/component-showcase.scss';
+import '../../styles/component-Showcase.scss';
 
 
 const options = [
@@ -12,7 +12,7 @@ const options = [
 export class FormShowcase extends React.Component {
 	render() {
 		return (
-			<div className='component-showcase component-showcase--form'>
+			<div className='component-Showcase component-Showcase--form'>
 				<Header as='h2'>
 					Form
 					<Header.Subheader>
@@ -34,7 +34,7 @@ export class FormShowcase extends React.Component {
 					</Form.Field>
 					<Button type='submit'>Submit</Button>
 				</Form>
-				<div className='component-showcase__divider--form'></div>
+				<div className='component-Showcase__divider--form'></div>
 
 				<Form success>
 					<Form.Input label='Email' placeholder='joe@schmoe.com' />
@@ -45,7 +45,7 @@ export class FormShowcase extends React.Component {
 					/>
 					<Button>Submit</Button>
 				</Form>
-				<div className='component-showcase__divider--form'></div>
+				<div className='component-Showcase__divider--form'></div>
 
 				<Form>
 					<Form.Group widths='equal'>
@@ -55,7 +55,7 @@ export class FormShowcase extends React.Component {
 					<Form.Select options={options} placeholder='Gender' error />
 					<Form.Checkbox label='I agree to the Terms and Conditions' error />
 				</Form>
-				<div className='component-showcase__divider--form'></div>
+				<div className='component-Showcase__divider--form'></div>
 				
 				<Form loading>
 					<Form.Input label='Email' placeholder='joe@schmoe.com' />

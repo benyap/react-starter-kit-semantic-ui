@@ -21,6 +21,8 @@ module.exports = {
 			'react-dom',
 			'react-router-dom',
 			'semantic-ui-react',
+			'dateformat',
+			'axios'
 		]
 	},
 	module: {
@@ -62,7 +64,7 @@ module.exports = {
 			},
 			{
 				test: /\.scss$/,
-				// This compiles styles from Semantic-UI				
+				// This compiles styles from Semantic-UI
 				include: resolve(__dirname, './src/assets'),
 				use: extractVendorStyles.extract({
 					fallback: 'style-loader',
@@ -106,6 +108,12 @@ module.exports = {
 		// Extract styles into a separate css files
 		extractAppStyles,
 		extractVendorStyles,
+
+		new webpack.DefinePlugin({
+			'process.env':{
+				'BUILD_DATE': JSON.stringify(new Date())
+			}
+		}),
 		
 		new HTMLWebpackPlugin({
 			filename: 'index.html',

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { Sidebar, Menu, Icon } from 'semantic-ui-react';
 
-import '../styles/component-sidebarMenu.scss';
+import '../styles/component-SidebarMenu.scss';
 
 
 export class SidebarMenu extends React.Component {
@@ -16,7 +16,7 @@ export class SidebarMenu extends React.Component {
 		const { visible, toggleSidebar, children } = this.props;
 
 		return (
-			<Sidebar.Pushable className='component-sidebarMenu'>
+			<Sidebar.Pushable className='component-SidebarMenu'>
 				<Sidebar as={Menu} animation='overlay' width='thin' visible={visible} icon='labeled' vertical inverted>
 					<Menu.Item onClick={toggleSidebar}>
 						<Icon name='remove'/>
@@ -28,6 +28,10 @@ export class SidebarMenu extends React.Component {
 					<Menu.Item as={Link} to='/showcase' onClick={toggleSidebar}>
 						<Icon name='block layout'/>
 						Showcase
+					</Menu.Item>
+					<Menu.Item as={Link} to='/data' onClick={toggleSidebar}>
+						<Icon name='database'/>
+						Data Fetch
 					</Menu.Item>
 					<Menu.Item as={Link} to='/lazy' onClick={toggleSidebar}>
 						<Icon name='download'/>

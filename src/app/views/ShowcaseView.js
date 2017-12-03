@@ -1,22 +1,69 @@
 import React from 'react';
 import { Container, Message, Icon } from 'semantic-ui-react';
+import asyncComponent from '../components/AsyncComponent';
 import { TitleWithIcon } from '../components/TitleWithIcon';
-import { ButtonShowcase } from '../components/showcase/ButtonShowcase';
-import { InputShowcase } from '../components/showcase/InputShowcase';
-import { MessageShowcase } from '../components/showcase/MessageShowcase';
-import { FormShowcase } from '../components/showcase/FormShowcase';
-import { TabShowcase } from '../components/showcase/TabShowcase';
-import { DropdownShowcase } from '../components/showcase/DropdownShowcase';
-import { ModalShowcase } from '../components/showcase/ModalShowcase';
-import { CardShowcase } from '../components/showcase/CardShowcase';
+import { LazyLoadFail } from '../components/LazyLoadFail';
 
-import '../styles/view-showcase.scss';
+import '../styles/view.scss';
+
+
+// ========================================
+//  Dynamically import showcase components
+// ========================================
+
+const ButtonShowcase = asyncComponent(async () => {
+	return import(/* webpackChunkName: "ButtonShowcase" */'../components/showcase/ButtonShowcase')
+		.then(module => module.ButtonShowcase)
+		.catch(() => () => <LazyLoadFail message='Failed to load ButtonShowcase component.'/>)
+});
+
+const InputShowcase = asyncComponent(async () => {
+	return import(/* webpackChunkName: "InputShowcase" */'../components/showcase/InputShowcase')
+		.then(module => module.InputShowcase)
+		.catch(() => () => <LazyLoadFail message='Failed to load InputShowcase component.'/>)
+});
+
+const MessageShowcase = asyncComponent(async () => {
+	return import(/* webpackChunkName: "MessageShowcase" */'../components/showcase/MessageShowcase')
+		.then(module => module.MessageShowcase)
+		.catch(() => () => <LazyLoadFail message='Failed to load MessageShowcase component.'/>)
+});
+	
+const FormShowcase = asyncComponent(async () => {
+	return import(/* webpackChunkName: "FormShowcase" */'../components/showcase/FormShowcase')
+		.then(module => module.FormShowcase)
+		.catch(() => () => <LazyLoadFail message='Failed to load FormShowcase component.'/>)
+});
+
+const TabShowcase = asyncComponent(async () => {
+	return import(/* webpackChunkName: "TabShowcase" */'../components/showcase/TabShowcase')
+		.then(module => module.TabShowcase)
+		.catch(() => () => <LazyLoadFail message='Failed to load TabShowcase component.'/>)
+});
+
+const DropdownShowcase = asyncComponent(async () => {
+	return import(/* webpackChunkName: "DropdownShowcase" */'../components/showcase/DropdownShowcase')
+		.then(module => module.DropdownShowcase)
+		.catch(() => () => <LazyLoadFail message='Failed to load DropdownShowcase component.'/>)
+});
+
+const ModalShowcase = asyncComponent(async () => {
+	return import(/* webpackChunkName: "ModalShowcase" */'../components/showcase/ModalShowcase')
+		.then(module => module.ModalShowcase)
+		.catch(() => () => <LazyLoadFail message='Failed to load ModalShowcase component.'/>)
+});
+
+const CardShowcase = asyncComponent(async () => {
+	return import(/* webpackChunkName: "CardShowcase" */'../components/showcase/CardShowcase')
+		.then(module => module.CardShowcase)
+		.catch(() => () => <LazyLoadFail message='Failed to load CardShowcase component.'/>)
+});
 
 
 export class ShowcaseView extends React.Component {
 	render() {
 		return (
-			<div className='view-showcase'>
+			<div className='view view-Showcase'>
 				<TitleWithIcon text='Component showcase' icon='block layout'
 					subtext='Some of the best from Semantic UI'/>
 

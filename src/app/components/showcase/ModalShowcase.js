@@ -1,8 +1,8 @@
 import React from 'react'
 import { Header, Button, Image, Modal, Icon } from 'semantic-ui-react'
 
-import '../../styles/component-showcase.scss';
-import '../../styles/component-showcase--modal.scss';
+import '../../styles/component-Showcase.scss';
+import '../../styles/component-Showcase--modal.scss';
 import '../../../assets/person.jpg';
 
 
@@ -16,7 +16,7 @@ export class ModalShowcase extends React.Component {
 		const { open, size } = this.state
 		
 		return (
-			<div className='component-showcase component-showcase--modal'>
+			<div className='component-Showcase component-Showcase--modal'>
 				<Header as='h2'>
 					Modal
 					<Header.Subheader>
@@ -24,7 +24,7 @@ export class ModalShowcase extends React.Component {
 					</Header.Subheader>
 				</Header>
 
-				<div className='component-showcase--modal__buttonGroup'>
+				<div className='component-Showcase--modal__buttonGroup'>
 					<Modal trigger={<Button>Show Modal</Button>}>
 						<Modal.Header>Select a Photo</Modal.Header>
 						<Modal.Content image>
@@ -52,9 +52,9 @@ export class ModalShowcase extends React.Component {
 						</Modal.Actions>
 					</Modal>
 				</div>
-				<div className='component-showcase__divider'></div>
+				<div className='component-Showcase__divider'></div>
 
-				<div className='component-showcase--modal__buttonGroup'>
+				<div className='component-Showcase--modal__buttonGroup'>
 					<Button onClick={this.show('mini')}>Mini</Button>
 					<Button onClick={this.show('tiny')}>Tiny</Button>
 					<Button onClick={this.show('small')}>Small</Button>

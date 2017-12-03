@@ -1,7 +1,7 @@
 import React from 'react'
 import { Header, Dropdown, Menu } from 'semantic-ui-react'
 
-import '../../styles/component-showcase.scss';
+import '../../styles/component-Showcase.scss';
 
 
 const options = [
@@ -51,7 +51,7 @@ const skillOptions = [
 export class DropdownShowcase extends React.Component {
 	render() {
 		return (
-			<div className='component-showcase component-showcase--dropdown'>
+			<div className='component-Showcase component-Showcase--dropdown'>
 				<Header as='h2'>
 					Dropdown
 					<Header.Subheader>
@@ -73,18 +73,18 @@ export class DropdownShowcase extends React.Component {
 						</Dropdown.Menu>
 					</Dropdown>
 				</Menu>
-				<div className='component-showcase__divider'></div>
+				<div className='component-Showcase__divider'></div>
 
 				<Menu compact>
 					<Dropdown text='Dropdown' options={options} simple item />
 				</Menu>
-				<div className='component-showcase__divider'></div>
+				<div className='component-Showcase__divider'></div>
 
 				<Dropdown placeholder='Select Friend' fluid selection options={friendOptions}/>
-				<div className='component-showcase__divider'></div>
+				<div className='component-Showcase__divider'></div>
 				
 				<Dropdown placeholder='Select Country' fluid search selection options={countryOptions} />
-				<div className='component-showcase__divider'></div>
+				<div className='component-Showcase__divider'></div>
 
 				<Dropdown placeholder='Skills' fluid multiple search selection options={skillOptions} />
 			</div>

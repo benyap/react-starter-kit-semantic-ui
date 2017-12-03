@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Header } from 'semantic-ui-react'
 
-import '../styles/component-title.scss';
+import '../styles/component-Title.scss';
 
 
 export class Title extends React.Component {
@@ -15,7 +15,7 @@ export class Title extends React.Component {
 		const { text, subtext, children } = this.props;
 		
 		return (
-			<div className='component-title'>
+			<div className='component-Title'>
 				<Header as='h1' textAlign='center'>
 					{text}
 					<Header.Subheader>

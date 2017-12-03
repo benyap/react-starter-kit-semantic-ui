@@ -1,7 +1,7 @@
 import React from 'react'
 import { Header, Button, Tab, Icon } from 'semantic-ui-react'
 
-import '../../styles/component-showcase.scss';
+import '../../styles/component-Showcase.scss';
 
 
 const panes = [
@@ -13,7 +13,7 @@ const panes = [
 export class TabShowcase extends React.Component {
 	render() {
 		return (
-			<div className='component-showcase component-showcase--tab'>
+			<div className='component-Showcase component-Showcase--tab'>
 				<Header as='h2'>
 					Tab
 					<Header.Subheader>
@@ -22,10 +22,10 @@ export class TabShowcase extends React.Component {
 				</Header>
 
 				<Tab panes={panes}/>
-				<div className='component-showcase__divider'></div>
+				<div className='component-Showcase__divider'></div>
 
 				<Tab menu={{ secondary: true, pointing: true }} panes={panes} />
-				<div className='component-showcase__divider'></div>
+				<div className='component-Showcase__divider'></div>
 
 				{/* NOTE: the tabular prop throws a 'Failed prop type' error. This is a known issue. */}
 				{/* <Tab menu={{ fluid: true, vertical: true, tabular: 'left' }} panes={panes} /> */}

@@ -2,16 +2,17 @@ import React from 'react';
 import { Header, Button, Container } from 'semantic-ui-react';
 import { Title } from '../components/Title';
 
-import '../styles/view-home.scss';
+import '../styles/view.scss';
 
 
 export class HomeView extends React.Component {
 	render() {
 		return (
-			<div className='view-home'>
+			<div className='view view-Home'>
 				<Title text='React starter kit with Semantic UI' subtext='Because boilerplate sucks'>
-					<div className='component-title__button-container'>
+					<div className='component-Title__button-container'>
 						<Button as='a' 
+							primary
 							icon='github'
 							content='Get from GitHub'
 							labelPosition='left'
@@ -40,12 +41,31 @@ export class HomeView extends React.Component {
 						git clone https://github.com/bwyap/react-starter-kit-semantic-ui.git
 					</div>
 					<p>
-						Then follow <a href='https://github.com/bwyap/react-starter-kit-semantic-ui#how-to-use-this-project'>the instructions</a> in the README.md file
-						under the "How to use this project" section. 
+						Then follow <a href='https://github.com/bwyap/react-starter-kit-semantic-ui#how-to-use-this-project'>the instructions</a> in the README.md file in the "How to use this project" section. 
 					</p>
 
 					<Header as='h2'>
-						Features
+						Can't I just use NPM to install Semantic UI React?
+					</Header>
+					<p>
+						If you're already comfortable with setting up your own builds with a build tool like Webpack or Gulp,
+						then yes, you can just do <code>npm install semantic-ui-react</code> to add it to your project.
+						However, the Semantic UI React integration by default <b>does not support custom theming</b>,
+						one of the major selling features of the original Semantic UI library. 
+						This is where this starter kit comes in!
+					</p>
+					<p>
+						This project includes the vanilla <code>semantic-ui</code> package as a development dependency and 
+						uses it to build custom CSS styles that support theming. 
+						The theming files are included in the <code>src/app/semantic-ui/src</code> directory,
+						and you use them just as you would in the vanilla Semantic UI (<a href='https://semantic-ui.com/usage/theming.html'>more info here</a>).
+						The Webpack build has been configured to automatically build the required assets - 
+						just make sure you remember to import the right CSS files and you'll be good to go!
+						Semantic UI styles are imported in the <code>src/assets/vendor.scss</code> file.
+					</p>
+
+					<Header as='h2'>
+						Technologies
 					</Header>
 
 					<Header as='h3'>
@@ -76,11 +96,12 @@ export class HomeView extends React.Component {
 					</p>
 
 					<Header as='h3'>
-						SCSS Breakpoints
+						Sass (with breakpoints!)
 					</Header>
 					<p>
-						Some useful breakpoint mixins are provided in the <code>src/app/styles/_bp.scss</code> file. 
-						They are provided for convenience when creating responsive design and use a mobile-first approach. 
+						<a href='http://sass-lang.com'>Sass</a> is an extension to CSS which allows you to use nesting, variables, mixins and more,
+						allowing you to better organise and write more powerful CSS with little effort. 
+						Additionally, some useful breakpoint mixins are provided in the <code>src/app/styles/_bp.scss</code> file. 
 						View the <a href='https://github.com/bwyap/react-starter-kit-semantic-ui/tree/master/src/app/styles'>README.md</a> file in the <code>src/app/styles</code> folder in the project source for more details on how to use the mixins.
 					</p>
 

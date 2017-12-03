@@ -1,7 +1,7 @@
 import React from 'react'
 import { Header, Card, Button, Icon, Image } from 'semantic-ui-react'
 
-import '../../styles/component-showcase.scss';
+import '../../styles/component-Showcase.scss';
 import '../../../assets/person.jpg';
 
 
@@ -23,7 +23,7 @@ export class CardShowcase extends React.Component {
 		const avatar = <Image wrapped src='/images/person.jpg'/>;
 
 		return (
-			<div className='component-showcase component-showcase--card'>
+			<div className='component-Showcase component-Showcase--card'>
 				<Header as='h2'>
 					Card
 					<Header.Subheader>
@@ -61,7 +61,7 @@ export class CardShowcase extends React.Component {
 						description='Elliot is a sound engineer living in Nashville who enjoys playing guitar and hanging with his cat.'
 						extra={<a><Icon name='user'/>16 Friends</a>}/>
 				</Card.Group>
-				<div className='component-showcase__divider'></div>
+				<div className='component-Showcase__divider'></div>
 
 				<Card.Group>
 					<Card>
@@ -105,7 +105,7 @@ export class CardShowcase extends React.Component {
 						</Card.Content>
 					</Card>
 				</Card.Group>
-				<div className='component-showcase__divider'></div>
+				<div className='component-Showcase__divider'></div>
 
 				<Card.Group items={items}/>
 			</div>
