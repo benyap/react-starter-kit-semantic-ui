@@ -94,27 +94,31 @@ module.exports = {
 		extensions: ['*', '.js', '.jsx'],
 	},
 	plugins: [
+		// This pulls out webpack module IDs that changes every build to help with caching
 		new webpack.HashedModuleIdsPlugin(),
 		
+		// This separates vendor-provided code into a separate chunk
 		new webpack.optimize.CommonsChunkPlugin({
 			name: 'vendor'
 		}),
-
+		
 		// This pulls out webpack boilerplate code that changes every build to help with caching
 		new webpack.optimize.CommonsChunkPlugin({
-			name: 'commons'
+			name: 'runtime'
 		}),
 
 		// Extract styles into a separate css files
 		extractAppStyles,
 		extractVendorStyles,
 
+		// Inject the build date as an environment variable 
 		new webpack.DefinePlugin({
 			'process.env':{
 				'BUILD_DATE': JSON.stringify(new Date())
 			}
 		}),
 		
+		// Inject the required assets into the template index file
 		new HTMLWebpackPlugin({
 			filename: 'index.html',
 			template: 'src/assets/index.html',
