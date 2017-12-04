@@ -65,6 +65,7 @@ The files inside `src/app` can be customised in any way to build your applicatio
     │   ├── app/
     │   │   ├── components/...       # Custom components
     │   │   ├── containers/...       # Custom component containers
+    │   │   ├── helpers/...          # Helper functions
     │   │   ├── styles/...           # Styles used by components
     │   │   ├── views/...            # Custom 'views' built from components
     │   │   └── App.js               # Root application component (contains routing logic)
