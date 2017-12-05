@@ -101,10 +101,17 @@ The files inside `src/app` can be customised in any way to build your applicatio
 
 ### Running the project locally
 
-1. If you have never built the project before, run the command `npm run build:semantic` to build the Semantic UI assets for the first time (this will output the files into the `src/semantic-ui/dist` directory, where they are imported into other files). 
+1. If you have never built the project before, run the command `npm run build:semantic` to build the Semantic UI assets* for the first time (this will output the files into the `src/semantic-ui/dist` directory, where they are imported into other files).
 2. Run `npm run local` to build and serve the project on `http://localhost:8080`. 
 
 This will use `webpack-dev-server` to serve the assets, and watch source files for any changes. Note that you do not need to run `npm run build:semantic` again once you've built the Semantic UI assets once as `npm run local` will watch the source for any changes and rebuild the assets. 
+
+*If you're on Windows and you are unable to run the command `npm run build:semantic`, run these alternative commands from your root directory to build the Semantic UI assets:
+```
+cd src/semantic-ui
+../../node_modules/.bin/gulp build-assets
+../../node_modules/.bin/gulp build-css
+```
 
 #### Running the project locally (app only)
 
