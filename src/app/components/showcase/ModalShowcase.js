@@ -1,5 +1,5 @@
-import React from 'react'
-import { Header, Button, Image, Modal, Icon } from 'semantic-ui-react'
+import React from 'react';
+import { Header, Button, Image, Modal, Icon } from 'semantic-ui-react';
 
 import '../../styles/component-Showcase.scss';
 import '../../styles/component-Showcase--modal.scss';

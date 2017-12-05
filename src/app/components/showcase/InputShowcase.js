@@ -1,5 +1,5 @@
-import React from 'react'
-import { Header, Icon, Input, Dropdown } from 'semantic-ui-react'
+import React from 'react';
+import { Header, Icon, Input, Dropdown } from 'semantic-ui-react';
 
 import '../../styles/component-Showcase.scss';
 import '../../styles/component-Showcase--input.scss';

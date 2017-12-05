@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { Dimmer, Loader } from 'semantic-ui-react';
 
 import '../styles/component-LazyLoadLoadingView.scss';

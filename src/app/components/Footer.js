@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import DateFormat from 'dateformat';
 
 import '../styles/component-Footer.scss';

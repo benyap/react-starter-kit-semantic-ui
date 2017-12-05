@@ -1,5 +1,5 @@
-import React from 'react'
-import { Header, Button, Tab, Icon } from 'semantic-ui-react'
+import React from 'react';
+import { Header, Button, Tab, Icon } from 'semantic-ui-react';
 
 import '../../styles/component-Showcase.scss';
 

@@ -1,5 +1,5 @@
-import React from 'react'
-import { Header, Form, Button, Checkbox, Message } from 'semantic-ui-react'
+import React from 'react';
+import { Header, Form, Button, Checkbox, Message } from 'semantic-ui-react';
 
 import '../../styles/component-Showcase.scss';
 

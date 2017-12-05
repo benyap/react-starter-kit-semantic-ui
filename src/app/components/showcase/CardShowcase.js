@@ -1,5 +1,5 @@
-import React from 'react'
-import { Header, Card, Button, Icon, Image } from 'semantic-ui-react'
+import React from 'react';
+import { Header, Card, Button, Icon, Image } from 'semantic-ui-react';
 
 import '../../styles/component-Showcase.scss';
 import '../../../assets/person.jpg';
