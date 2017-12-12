@@ -1,6 +1,6 @@
 import React from 'react';
 import { Header, Button, Container } from 'semantic-ui-react';
-import { Title } from '../components/Title';
+import { TitleWithIcon } from '../components/TitleWithIcon';
 
 import '../styles/view.scss';
 
@@ -9,7 +9,7 @@ export class HomeView extends React.Component {
 	render() {
 		return (
 			<div className='view view-Home'>
-				<Title text='React starter kit with Semantic UI' subtext='Because boilerplate sucks'>
+				<TitleWithIcon text='React starter kit with Semantic UI' subtext='Because boilerplate sucks' icon='blank'>
 					<div className='component-Title__button-container'>
 						<Button as='a' 
 							primary
@@ -19,7 +19,7 @@ export class HomeView extends React.Component {
 							href='https://github.com/bwyap/react-starter-kit-semantic-ui'
 							target='_blank'/>
 					</div>
-				</Title>
+				</TitleWithIcon>
 				<Container text>
 					<p>
 						This repository contains boilerplate code to help kickstart a frontend project with <a href='http://reactjs.org'>React</a>, 

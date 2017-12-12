@@ -1,0 +1,11 @@
+@import 'bp';
+
+$block: component-TopMenu;
+
+.#{$block} {
+	display: none;
+
+	@include bp-above(lg) {
+		display: block;
+	}
+}

@@ -1,6 +1,12 @@
+@import 'bp';
+
 $block: component-SidebarButton;
 
 button.ui.button.#{$block} {
+	@include bp-above(lg) {
+		display: none !important;
+	}
+
 	float: left;
 	margin: 0.5rem 0.5rem 0 0;
 	background: none;

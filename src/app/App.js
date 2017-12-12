@@ -5,6 +5,7 @@ import { Transition, Button } from 'semantic-ui-react';
 import asyncComponent from './components/AsyncComponent';
 import { LazyLoadLoadingView } from './components/LazyLoadLoadingView';
 import { Footer } from './components/Footer';
+import { TopMenu } from './components/TopMenu';
 import { SidebarMenu } from './components/SidebarMenu';
 import { HomeView } from './views/HomeView';
 import { ShowcaseView } from './views/ShowcaseView';
@@ -63,6 +64,7 @@ class App extends React.Component {
 					<Transition visible={!this.state.sidebarVisible} animation='fade right' duration={500}>
 						<Button size='massive' className='component-SidebarButton' icon='content' onClick={this.toggleSidebar}/>
 					</Transition>
+					<TopMenu/>
 					
 					{/* Routes */}
 					<Switch>
