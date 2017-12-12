@@ -30,7 +30,7 @@ export class LazyLoadFailView extends React.Component {
 					<p>
 						This mechanism can be easily achieved by adding a catch block to your dynamic import 
 						that returns a statically imported fail-safe component if it fails to retrieve the lazy loaded component. 
-						See <a href='https://github.com/bwyap/react-starter-kit-semantic-ui/blob/master/src/app/App.jsx'><code>App.jsx</code></a> for an example of how this is done. 
+						See <a href='https://github.com/bwyap/react-starter-kit-semantic-ui/blob/master/src/app/App.js'><code>App.js</code></a> for an example of how this is done. 
 					</p>
 				</Container>
 			</div>
