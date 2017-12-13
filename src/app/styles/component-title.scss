@@ -1,9 +1,10 @@
+@import 'variables';
 @import 'bp';
 
 $block: component-Title;
 
 .#{$block} {
-	background-color: #365475;
+	background-color: $theme-color;
 	min-height: 60vh;
 	margin-bottom: 2rem;
 	padding: 0 1rem;

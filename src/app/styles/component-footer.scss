@@ -1,10 +1,11 @@
+@import 'variables';
 @import 'bp';
 
 $block: component-Footer;
 
 .#{$block} {
 	color: white;
-	background-color: #233347;
+	background-color: $theme-color;
 	margin-top: 2rem;
 
 	.#{$block}__text {
@@ -28,10 +29,10 @@ $block: component-Footer;
 		}
 
 		a {
-			color: rgb(193, 221, 253);
+			color: $theme-color-light;
 
 			&:hover {
-				color: rgb(228, 240, 255);
+				color: $theme-color-highlight;
 			}
 		}
 	}
