@@ -9,7 +9,7 @@ export class HomeView extends React.Component {
 	render() {
 		return (
 			<div className='view view-Home'>
-				<TitleWithIcon text='React starter kit with Semantic UI' subtext='Because boilerplate sucks' icon='blank'>
+				<TitleWithIcon text='React starter kit with Semantic UI' subtext='Because boilerplate sucks' icon='home'>
 					<div className='component-Title__button-container'>
 						<Button as='a' 
 							primary

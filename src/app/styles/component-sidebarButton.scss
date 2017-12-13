@@ -3,7 +3,7 @@
 $block: component-SidebarButton;
 
 button.ui.button.#{$block} {
-	@include bp-above(lg) {
+	@include bp-above(md) {
 		display: none !important;
 	}
 
