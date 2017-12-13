@@ -15,7 +15,7 @@ import { LazyLoadFailView } from './views/LazyLoadFailView';
 
 import '../assets/vendor.scss';
 import './styles/_global.scss';
-import './styles/component-sidebarButton.scss';
+import './styles/component-SidebarButton.scss';
 
 
 // =================
