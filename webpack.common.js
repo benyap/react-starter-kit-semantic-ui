@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const resolve = require('path').resolve;
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const extractAppStyles = new ExtractTextPlugin('css/app.[contenthash].css');
 const extractVendorStyles = new ExtractTextPlugin('css/vendor.[contenthash].css');
@@ -123,6 +124,11 @@ module.exports = {
 			filename: 'index.html',
 			template: 'src/assets/index.html',
 		}),
+
+		// Copy public files into the dist folder
+		new CopyWebpackPlugin([
+			{ from: 'src/public' }
+		]),
 	],
 	output: {
 		path: __dirname + '/dist',
