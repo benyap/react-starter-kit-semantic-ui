@@ -16,6 +16,9 @@
     "local:app": "./node_modules/.bin/webpack-dev-server --history-api-fallback --config webpack.dev.js --progress",
     "local:prod": "./node_modules/.bin/concurrently -k \"npm run watch:semantic\" \"npm run watch:local:prod\"",
     "build": "npm run build:semantic && npm run build:package",
+    "publish:dev": "./node_modules/.bin/gulp publish:dev",
+    "publish:stage": "./node_modules/.bin/gulp publish:stage",
+    "publish:prod": "./node_modules/.bin/gulp publish:prod",
     "stats": "./node_modules/.bin/webpack --config webpack.prod.js --progress --json > stats.json"
   },
   "dependencies": {

@@ -136,6 +136,40 @@ Use this method if the Semantic UI components have not been modified since the l
 2. This should output the build files into the folder `dist`. You may upload these files to a server for static web hosting. 
 
 
+### Deploying the website
+
+Ensure you have an AWS profile called `default` in your AWS credentials file with the access permissions to upload to corresponding the S3 bucket, as the deployment script automatically uses that profile. To check your AWS credentials file, go to `~/.aws/credentials`. You should see something like this:
+
+```ini
+# other stuff
+...
+
+[default]
+aws_access_key_id=XXXXXXXXXXXXXXXXXXXX
+aws_secret_access_key=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+# other stuff
+...
+```
+
+#### Deploying to dev
+
+1. Build the assets for production (see *Building for production*). This will output the files to the `dist` folder.
+2. Run the command `npm run publish:dev`. This will upload the files in the `dist` folder to the S3 bucket for `dev.YOUR.DOMAIN`.
+
+#### Deploying to staging
+
+1. Build the assets for production (see *Building for production*). This will output the files to the `dist` folder.
+2. Run the command `npm run publish:stage`. This will upload the files in the `dist` folder to the S3 bucket for `staging.YOUR.DOMAIN`.
+
+#### Deploying to production
+
+**IMPORTANT:** Make sure that all links in the website are pointing to production URLs!
+
+1. Build the assets for production (see *Building for production*). This will output the files to the `dist` folder.
+2. Run the command `npm run publish:prod`. This will upload the files in the `dist` folder to the S3 bucket for `YOUR.DOMAIN`.
+
+
 ## Notes on conventions used
 
 ### Components, containers and views

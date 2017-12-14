@@ -10,23 +10,23 @@ const awspublish = require('gulp-awspublish');
 	You will need to set up an AWS profile with credentials that have the right permissions to be able to use these tasks. 
 
 	NOTE: this set up assumes you are using a 3-stage publishing cycle:
-		- dev.YOURDOMAIN.com
-		- staging.YOURDOMAIN.com
-		- YOURDOMAIN.com
+		- dev.YOUR.DOMAIN
+		- staging.YOUR.DOMAIN
+		- YOUR.DOMAIN
 
 	There is a gulp task that publishes to each stage. 
 */
 
-// =====================
-//  SET THESE VARIABLES
-// =====================
+// ======================
+//  SET THESE VARIABLES!
+// ======================
 
 // This should be the name of your bucket.
 // If you are using a custom domain, the bucket should match the name of your domain.
 const BUCKET = '';
 
 // This should be the name of the AWS profile in your ~/.aws/credentials file.
-const AWS_PROFILE = '';
+const AWS_PROFILE = 'default';
 
 
 // ===================
