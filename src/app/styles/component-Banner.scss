@@ -1,0 +1,13 @@
+$block: component-Banner;
+
+.#{$block} {
+	position: sticky;
+	top: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.2rem;
+	font-size: 0.9rem;
+	width: 100%;
+	z-index: 9999;
+}

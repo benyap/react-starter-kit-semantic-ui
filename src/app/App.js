@@ -12,6 +12,7 @@ import { ShowcaseView } from './views/ShowcaseView';
 import { DataFetchView } from './views/DataFetchView';
 import { NotFoundView } from './views/NotFoundView';
 import { LazyLoadFailView } from './views/LazyLoadFailView';
+import { Banner } from './components/Banner';
 
 import '../assets/vendor.scss';
 import './styles/_global.scss';
@@ -65,6 +66,7 @@ class App extends React.Component {
 						<Button size='massive' className='component-SidebarButton' icon='content' onClick={this.toggleSidebar}/>
 					</Transition>
 					<TopMenu/>
+					<Banner/>
 					
 					{/* Routes */}
 					<Switch>
