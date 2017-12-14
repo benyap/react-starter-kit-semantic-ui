@@ -1,5 +1,6 @@
 import React from 'react';
 import { Header, Button, Container } from 'semantic-ui-react';
+import { ScrollToTop } from '../components/ScrollToTop';
 import { TitleWithIcon } from '../components/TitleWithIcon';
 
 import '../styles/view.scss';
@@ -9,6 +10,7 @@ export class HomeView extends React.Component {
 	render() {
 		return (
 			<div className='view view-Home'>
+				<ScrollToTop/>
 				<TitleWithIcon text='React starter kit with Semantic UI' subtext='Because boilerplate sucks' icon='rocket'>
 					<div className='component-Title__button-container'>
 						<Button as='a' 

@@ -2,9 +2,4 @@ $block: component-SidebarMenu;
 
 .#{$block} {
 	height: 100%;
-
-	&.pushable > .pusher {
-		height: 100vh;
-		overflow: auto;
-	}
 }

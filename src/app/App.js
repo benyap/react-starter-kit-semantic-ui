@@ -61,24 +61,27 @@ class App extends React.Component {
 	render() {
 		return (
 			<BrowserRouter>
-				<SidebarMenu visible={this.state.sidebarVisible} toggleSidebar={this.toggleSidebar}>
-					<Transition visible={!this.state.sidebarVisible} animation='fade right' duration={500}>
-						<Button size='massive' className='component-SidebarButton' icon='content' onClick={this.toggleSidebar}/>
-					</Transition>
+				<main>
+					{/* <Banner/> */}
 					<TopMenu/>
-					<Banner/>
-					
-					{/* Routes */}
-					<Switch>
-						<Route exact path='/' component={HomeView}/>
-						<Route exact path='/showcase' component={ShowcaseView}/>
-						<Route exact path='/data' component={DataFetchView}/>
-						<Route exact path='/lazy' component={LazyLoadView}/>
-						<Route component={NotFoundView}/>
-					</Switch>
-					
-					<Footer/>
-				</SidebarMenu>
+
+					<SidebarMenu visible={this.state.sidebarVisible} toggleSidebar={this.toggleSidebar}>
+						<Transition visible={!this.state.sidebarVisible} animation='fade right' duration={500}>
+							<Button size='massive' className='component-SidebarButton' icon='content' onClick={this.toggleSidebar}/>
+						</Transition>
+						
+						{/* Routes */}
+						<Switch>
+							<Route exact path='/' component={HomeView}/>
+							<Route exact path='/showcase' component={ShowcaseView}/>
+							<Route exact path='/data' component={DataFetchView}/>
+							<Route exact path='/lazy' component={LazyLoadView}/>
+							<Route component={NotFoundView}/>
+						</Switch>
+						
+						<Footer/>
+					</SidebarMenu>
+				</main>
 			</BrowserRouter>
 		);
 	}

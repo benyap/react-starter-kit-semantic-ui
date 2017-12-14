@@ -1,5 +1,6 @@
 import React from 'react';
 import { Header, Button, Container } from 'semantic-ui-react';
+import { ScrollToTop } from '../components/ScrollToTop';
 import { TitleWithIcon } from '../components/TitleWithIcon';
 import { SWAPIFilmListContainer } from '../containers/SWAPIFilmListContainer';
 
@@ -10,6 +11,7 @@ export class DataFetchView extends React.Component {
 	render() {
 		return (
 			<div className='view view-DataFetch'>
+				<ScrollToTop/>
 				<TitleWithIcon icon='database' text='Data Fetching' subtext='SWAPI - The Star Wars API'/>
 				<Container text>
 					<p>

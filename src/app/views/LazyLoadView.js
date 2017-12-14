@@ -1,5 +1,6 @@
 import React from 'react';
 import { Header, Container } from 'semantic-ui-react';
+import { ScrollToTop } from '../components/ScrollToTop';
 import { TitleWithIcon } from '../components/TitleWithIcon';
 
 import '../styles/view.scss';
@@ -9,6 +10,7 @@ export class LazyLoadView extends React.Component {
 	render() {
 		return (
 			<div className='view view-LazyLoad'>
+				<ScrollToTop/>
 				<TitleWithIcon text='LazyLoad example' icon='download'
 					subtext='Only download what you need'/>
 				<Container text>

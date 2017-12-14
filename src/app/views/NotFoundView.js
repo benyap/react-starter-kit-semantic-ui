@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Icon, Container } from 'semantic-ui-react';
+import { ScrollToTop } from '../components/ScrollToTop';
 import { TitleWithIcon } from '../components/TitleWithIcon';
 
 import '../styles/view.scss';
@@ -11,6 +12,7 @@ export class NotFoundView extends React.Component {
 		
 		return (
 			<div className='view view-NotFound'>
+				<ScrollToTop/>
 				<TitleWithIcon text='Page not found.' icon='warning circle'
 					subtext={<span>The route at <code>{location.pathname}</code> doesn't contain anything.</span>}>
 					<div className='component-Title__button-container'>

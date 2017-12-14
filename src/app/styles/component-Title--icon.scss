@@ -6,10 +6,10 @@ $block: component-Title;
 	@extend .#{$block};
 
 	h1.ui.header {
-		padding-top: 15vh;
+		padding-top: 22vh;
 
 		@include bp-above(xs) {
-			padding-top: 20vh;
+			padding-top: 15vh;
 		}
 	}
 }

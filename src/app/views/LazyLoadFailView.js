@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Icon, Container } from 'semantic-ui-react';
+import { ScrollToTop } from '../components/ScrollToTop';
 import { TitleWithIcon } from '../components/TitleWithIcon';
 
 import '../styles/view.scss';
@@ -11,6 +12,7 @@ export class LazyLoadFailView extends React.Component {
 		
 		return (
 			<div className='view view-LazyLoadFail'>
+				<ScrollToTop/>
 				<TitleWithIcon text='Failed to load' icon='warning circle'
 					subtext={<span>Could not load <code>{location.pathname}</code> from server.</span>}>
 					<div className='component-Title__button-container'>

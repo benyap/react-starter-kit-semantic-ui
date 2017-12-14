@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Message, Icon } from 'semantic-ui-react';
 import asyncComponent from '../components/AsyncComponent';
+import { ScrollToTop } from '../components/ScrollToTop';
 import { TitleWithIcon } from '../components/TitleWithIcon';
 import { LazyLoadFail } from '../components/LazyLoadFail';
 
@@ -64,6 +65,7 @@ export class ShowcaseView extends React.Component {
 	render() {
 		return (
 			<div className='view view-Showcase'>
+				<ScrollToTop/>
 				<TitleWithIcon text='Component showcase' icon='block layout'
 					subtext='Some of the best from Semantic UI'/>
 
