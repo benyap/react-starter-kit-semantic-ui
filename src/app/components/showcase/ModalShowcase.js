@@ -3,7 +3,7 @@ import { Header, Button, Image, Modal, Icon } from 'semantic-ui-react';
 
 import '../../styles/component-Showcase.scss';
 import '../../styles/component-Showcase--modal.scss';
-import '../../../assets/person.jpg';
+import '../../../assets/images/person.jpg';
 
 
 export class ModalShowcase extends React.Component {
