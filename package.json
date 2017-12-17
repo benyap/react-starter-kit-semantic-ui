@@ -29,6 +29,7 @@
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
     "react-router-dom": "^4.2.2",
+    "react-waypoint": "^7.3.3",
     "semantic-ui-react": "^0.76.0"
   },
   "devDependencies": {

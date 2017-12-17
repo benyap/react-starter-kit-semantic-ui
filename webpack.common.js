@@ -23,7 +23,8 @@ module.exports = {
 			'react-router-dom',
 			'semantic-ui-react',
 			'dateformat',
-			'axios'
+			'axios',
+			'react-waypoint'
 		]
 	},
 	module: {

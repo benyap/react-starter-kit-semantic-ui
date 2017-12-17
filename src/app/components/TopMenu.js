@@ -9,7 +9,7 @@ import '../styles/component-TopMenu.scss';
 export class TopMenu extends React.Component {
 	render() {
 		return (
-			<div className='component-TopMenu'>
+			<div id='top-menu' className='component-TopMenu'>
 				<Container text>
 					<Menu borderless>
 						<Menu.Item as={Link} to='/'>

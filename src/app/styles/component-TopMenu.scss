@@ -3,33 +3,48 @@
 
 $block: component-TopMenu;
 
+$transition-time: 0.4s;
+
 .#{$block} {
 	display: none;
 
 	@include bp-above(md) {
 		display: flex;
-		position: sticky;
-		top: 0;
+		position: fixed;
 		z-index: 9999;
 		width: 100%;
-		background-color: $theme-color;
-		border-bottom: 1px solid rgba(0,0,0,0.1);
 		
+		&.reduced {
+			background-color: $theme-color;
+			
+			.ui.menu a.item {
+				font-size: 1rem;
+			}
+		}
+
 		.ui.menu {
+			display: flex;
+			justify-content: center;
 			border: none;
+			border-radius: 0;
 			box-shadow: none;
 			background-color: rgba(0,0,0,0);
-
+			
 			a.item {
 				color: white;
+				border-radius: 0.5rem;
+				
+				transition: all 0.2s, font-size $transition-time;
+				font-size: 1.3rem;
 
 				&:hover {
 					color: $theme-color-light;
+					background-color: rgba(255,255,255,0.08);
 				}
 
 				&:active {
-					background-color: darken($theme-color, 5%);
 					color: $theme-color-highlight;
+					background-color: rgba(255,255,255,0.2);
 				}
 			}
 		}
