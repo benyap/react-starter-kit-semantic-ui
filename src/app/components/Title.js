@@ -4,6 +4,7 @@ import Waypoint from 'react-waypoint';
 import { Header } from 'semantic-ui-react'
 
 import '../styles/component-Title.scss';
+import '../../assets/images/background.jpg';
 
 
 export class Title extends React.Component {

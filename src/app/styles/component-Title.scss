@@ -4,7 +4,9 @@
 $block: component-Title;
 
 .#{$block} {
-	background-color: $theme-color;
+	// background-color: $theme-color;
+	background-image: url('/images/background.jpg');
+	background-size: cover;
 	min-height: 60vh;
 	margin-bottom: 2rem;
 	padding: 0 1rem;
