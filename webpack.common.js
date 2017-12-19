@@ -44,6 +44,7 @@ module.exports = {
 							plugins: [
 								'transform-class-properties', 
 								'transform-decorators-legacy', 
+								'transform-object-rest-spread', 
 								'syntax-dynamic-import', 
 							],
 						}
